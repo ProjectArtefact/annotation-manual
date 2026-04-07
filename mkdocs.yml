@@ -1,0 +1,66 @@
+site_name: Video Annotation Manual
+site_url: https://projectartefact.github.io/annotation-manual
+repo_url: https://github.com/ProjectArtefact/annotation-manual
+repo_name: ProjectArtefact/annotation-manual
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - For Clinicians:
+    - Connecting + Annotating + Reviewing: clinicians/clinician-workflow.md
+    - Interface Overview: clinicians/interface-overview.md
+    - Video Annotation Basics: clinicians/video-annotation-basics.md
+    - Annotation Types: clinicians/annotation-types.md
+    - AI-Assisted Annotation Overview: clinicians/ai-assisted-annotation-overview.md
+    - Using the AI Tool (SAM): clinicians/using-segment-anything-model.md
+    - Video Object Tracking: clinicians/video-object-tracking.md
+  - For the Coordinator:
+    - System Requirements: coordinator/system-requirements.md
+    - Installation: coordinator/installation.md
+    - First Login and Setup: coordinator/first-login-and-setup.md
+    - Creating Projects and Tasks: coordinator/creating-projects-and-tasks.md
+    - Uploading Videos: coordinator/uploading-videos.md
+    - Installing AI Models: coordinator/installing-ai-models.md
+    - Reviewing and Exporting: coordinator/reviewing-and-exporting.md
+  - Troubleshooting: troubleshooting.md
