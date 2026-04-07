@@ -2,6 +2,8 @@ site_name: Video Annotation Manual
 site_url: https://projectartefact.github.io/annotation-manual
 repo_url: https://github.com/ProjectArtefact/annotation-manual
 repo_name: ProjectArtefact/annotation-manual
+edit_uri: edit/main/docs/
+copyright: Created by Ameya Pore
 
 theme:
   name: readthedocs
@@ -15,7 +17,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - For Clinicians:
-    - Connecting + Annotating + Reviewing: clinicians/clinician-workflow.md
+    - Clinician Guide: clinicians/clinician-workflow.md
     - Interface Overview: clinicians/interface-overview.md
     - Video Annotation Basics: clinicians/video-annotation-basics.md
     - Annotation Types: clinicians/annotation-types.md
