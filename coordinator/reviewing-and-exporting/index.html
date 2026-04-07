@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/coordinator/reviewing-and-exporting/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Reviewing and Exporting - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Reviewing and Exporting";
+        var mkdocs_page_input_path = "coordinator/reviewing-and-exporting.md";
+        var mkdocs_page_url = "/annotation-manual/coordinator/reviewing-and-exporting/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Reviewing and Exporting</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#finishing-your-annotation-task-clinicians">Finishing Your Annotation Task (Clinicians)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-submit">How to submit</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reviewing-a-colleagues-work-clinicians">Reviewing a Colleague's Work (Clinicians)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-review-stages-at-a-glance">The review stages at a glance</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#monitoring-progress-and-exporting-coordinator">Monitoring Progress and Exporting (Coordinator)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tracking-the-status-of-all-tasks">Tracking the status of all tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exporting-annotations">Exporting Annotations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#backing-up-the-data">Backing Up the Data</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#weekly-export-all-completed-tasks">Weekly: Export all completed tasks</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#weekly-full-server-backup-captures-everything-accounts-tasks-all-annotations">Weekly: Full server backup (captures everything — accounts, tasks, all annotations)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#restoring-from-a-backup">Restoring from a backup</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#backup-schedule-summary">Backup schedule summary</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For the Coordinator</li>
+      <li class="breadcrumb-item active">Reviewing and Exporting</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/coordinator/reviewing-and-exporting.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="reviewing-and-exporting-annotations">Reviewing and Exporting Annotations<a class="headerlink" href="#reviewing-and-exporting-annotations" title="Permanent link">&para;</a></h1>
+<p>This page covers three activities. Jump to the one you need:</p>
+<ul>
+<li><a href="#finishing-your-annotation-task-clinicians"><strong>Clinician: Finishing your annotation task</strong></a></li>
+<li><a href="#reviewing-a-colleagues-work-clinicians"><strong>Clinician: Reviewing a colleague's work</strong></a> — the peer-review process</li>
+<li><a href="#monitoring-progress-and-exporting-coordinator"><strong>Coordinator: Monitoring progress and exporting data</strong></a></li>
+</ul>
+<hr />
+<h2 id="finishing-your-annotation-task-clinicians">Finishing Your Annotation Task (Clinicians)<a class="headerlink" href="#finishing-your-annotation-task-clinicians" title="Permanent link">&para;</a></h2>
+<p>When you have annotated all the frames in your task, do the following before marking it as done.</p>
+<h3 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Every lesion or structure is annotated on every frame it is visible</li>
+<li>[ ] Masks cover the structure accurately — zoom in (<code>+</code> key) to check the edges</li>
+<li>[ ] Correct label used for each annotation (e.g. "polyp")</li>
+<li>[ ] Object marked as <strong>Outside</strong> on frames where it disappears from the video</li>
+<li>[ ] Work saved (<code>Ctrl + S</code>)</li>
+</ul>
+<h3 id="how-to-submit">How to submit<a class="headerlink" href="#how-to-submit" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Press <code>Ctrl + S</code> to save.</li>
+<li>Click the <strong>Menu (≡)</strong> button in the top-right of the annotation editor.</li>
+<li>Select <strong>Finish the job</strong>.</li>
+<li>Email <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a> to notify the coordinator — and let them know if you are available to review a colleague's task.</li>
+</ol>
+<hr />
+<h2 id="reviewing-a-colleagues-work-clinicians">Reviewing a Colleague's Work (Clinicians)<a class="headerlink" href="#reviewing-a-colleagues-work-clinicians" title="Permanent link">&para;</a></h2>
+<p>The coordinator will let you know which task to review and whose work it is.</p>
+<blockquote>
+<p><strong>Your account must have Supervisor role</strong> to change task stages (approve or reject). The coordinator sets this when creating your account. If you get "permission denied" when changing a stage, contact <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a>.</p>
+</blockquote>
+<p>For the complete step-by-step review guide including what to check and how to send feedback, see the dedicated section:</p>
+<p><strong>→ <a href="../../clinicians/clinician-workflow/#reviewing-another-clinicians-work">Reviewing Another Clinician's Work</a></strong></p>
+<h3 id="the-review-stages-at-a-glance">The review stages at a glance<a class="headerlink" href="#the-review-stages-at-a-glance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Set by</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Annotation</strong></td>
+<td>Coordinator (when task is created)</td>
+<td>Clinician is annotating</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Reviewer clinician</td>
+<td>Reviewer has opened the task and is checking it</td>
+</tr>
+<tr>
+<td><strong>Acceptance</strong></td>
+<td>Reviewer clinician</td>
+<td>Work is approved — ready to export</td>
+</tr>
+<tr>
+<td><strong>Annotation</strong> (again)</td>
+<td>Reviewer clinician</td>
+<td>Work sent back for corrections</td>
+</tr>
+</tbody>
+</table>
+<p>To change the stage: go to <strong>Tasks</strong> → open the task → expand the job → change the <strong>Stage</strong> dropdown → click <strong>Save</strong>.</p>
+<hr />
+<h2 id="monitoring-progress-and-exporting-coordinator">Monitoring Progress and Exporting (Coordinator)<a class="headerlink" href="#monitoring-progress-and-exporting-coordinator" title="Permanent link">&para;</a></h2>
+<h3 id="tracking-the-status-of-all-tasks">Tracking the status of all tasks<a class="headerlink" href="#tracking-the-status-of-all-tasks" title="Permanent link">&para;</a></h3>
+<p>Go to <strong>Tasks</strong> in the top navigation bar. You can see all tasks and their current stage at a glance:
+- <strong>Annotation</strong> — being worked on
+- <strong>Validation</strong> — under peer review
+- <strong>Acceptance</strong> — approved, ready to export</p>
+<hr />
+<h3 id="exporting-annotations">Exporting Annotations<a class="headerlink" href="#exporting-annotations" title="Permanent link">&para;</a></h3>
+<p>Export in <strong>COCO 1.0</strong> format — the standard for training segmentation models.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Go to the <strong>Tasks</strong> page.</li>
+<li>Click the <strong>⋮ (three-dot menu)</strong> on the right side of the task row.</li>
+<li>Select <strong>Export task dataset</strong>.</li>
+<li>Set:</li>
+<li><strong>Format:</strong> COCO 1.0</li>
+<li><strong>Save images:</strong> ✓ Tick this (includes the video frames as image files — needed for model training)</li>
+<li>Click <strong>OK</strong>.</li>
+<li>When ready, the file downloads as a <code>.zip</code> to your Downloads folder.</li>
+</ol>
+<p><strong>What the zip contains:</strong></p>
+<pre><code>export.zip
+├── annotations/
+│   └── instances_default.json    ← all mask annotations in COCO format
+└── images/
+    └── default/
+        ├── frame_000001.jpg
+        ├── frame_000002.jpg      ← one image per annotated frame
+        └── ...
+</code></pre>
+<p><strong>Exporting all clinicians' work together:</strong>
+If each clinician annotated different videos (the normal setup), export at the <strong>Project level</strong> to get everything in one file:
+1. Go to <strong>Projects</strong> in the top bar.
+2. Click the <strong>⋮</strong> menu on the project row.
+3. Select <strong>Export project dataset</strong> → COCO 1.0 → tick Save images → OK.</p>
+<p><strong>If two clinicians annotated the same video (inter-rater reliability):</strong>
+Export each task separately — one zip per clinician. Send both to your ML engineer for comparison (Dice coefficient, IoU etc.).</p>
+<hr />
+<h3 id="backing-up-the-data">Backing Up the Data<a class="headerlink" href="#backing-up-the-data" title="Permanent link">&para;</a></h3>
+<p><strong>Back up regularly.</strong> The university PC is the only place where annotations are stored.</p>
+<h4 id="weekly-export-all-completed-tasks">Weekly: Export all completed tasks<a class="headerlink" href="#weekly-export-all-completed-tasks" title="Permanent link">&para;</a></h4>
+<ol>
+<li>For each task that has reached <strong>Acceptance</strong> stage, export it as COCO 1.0.</li>
+<li>Save the zip files to a location separate from the university PC — for example:</li>
+<li>University shared drive (e.g. your institution's network storage)</li>
+<li>University-managed cloud storage (OneDrive for Business, SharePoint)</li>
+</ol>
+<h4 id="weekly-full-server-backup-captures-everything-accounts-tasks-all-annotations">Weekly: Full server backup (captures everything — accounts, tasks, all annotations)<a class="headerlink" href="#weekly-full-server-backup-captures-everything-accounts-tasks-all-annotations" title="Permanent link">&para;</a></h4>
+<p>Run this on the university PC:</p>
+<pre><code class="language-bash">cd ~/cvat
+docker exec cvat_db pg_dump -U root cvat &gt; cvat_backup_$(date +%Y%m%d).sql
+</code></pre>
+<p>This creates a file like <code>cvat_backup_20260401.sql</code>. Copy it to your university shared drive:</p>
+<pre><code class="language-bash">cp cvat_backup_$(date +%Y%m%d).sql /path/to/your/shared/drive/
+</code></pre>
+<h4 id="restoring-from-a-backup">Restoring from a backup<a class="headerlink" href="#restoring-from-a-backup" title="Permanent link">&para;</a></h4>
+<pre><code class="language-bash">cd ~/cvat
+docker exec -i cvat_db psql -U root cvat &lt; cvat_backup_20260401.sql
+</code></pre>
+<p>Replace <code>20260401</code> with the date of the backup file you want to restore.</p>
+<h4 id="backup-schedule-summary">Backup schedule summary<a class="headerlink" href="#backup-schedule-summary" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completed tasks</td>
+<td>Export as COCO 1.0 zip → save to shared drive</td>
+<td>When each task reaches Acceptance</td>
+</tr>
+<tr>
+<td>All annotations</td>
+<td>Project-level COCO export → shared drive</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Full server (accounts + all data)</td>
+<td><code>pg_dump</code> SQL file → shared drive</td>
+<td>Weekly</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../troubleshooting/">Troubleshooting</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installing-ai-models/" class="btn btn-neutral float-left" title="Installing AI Models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../troubleshooting/" class="btn btn-neutral float-right" title="Troubleshooting">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../installing-ai-models/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../troubleshooting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

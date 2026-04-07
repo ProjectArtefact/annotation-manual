@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/coordinator/first-login-and-setup/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>First Login and Setup - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "First Login and Setup";
+        var mkdocs_page_input_path = "coordinator/first-login-and-setup.md";
+        var mkdocs_page_url = "/annotation-manual/coordinator/first-login-and-setup/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">First Login and Setup</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview-of-what-you-need-to-set-up">Overview of What You Need to Set Up</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-log-in-to-cvat-as-the-main-admin">Step 1 — Log In to CVAT as the Main Admin</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-create-ssh-accounts-for-each-clinician">Step 2 — Create SSH Accounts for Each Clinician</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-create-an-organisation-in-cvat">Step 3 — Create an Organisation in CVAT</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-create-cvat-accounts-for-each-clinician">Step 4 — Create CVAT Accounts for Each Clinician</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-5-invite-clinicians-to-the-organisation-and-set-them-as-supervisors">Step 5 — Invite Clinicians to the Organisation and Set Them as Supervisors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-6-verify-a-clinician-can-connect">Step 6 — Verify a Clinician Can Connect</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-7-create-tasks-and-assign-them">Step 7 — Create Tasks and Assign Them</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changing-a-clinicians-password">Changing a Clinician's Password</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For the Coordinator</li>
+      <li class="breadcrumb-item active">First Login and Setup</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/coordinator/first-login-and-setup.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="first-login-and-setup">First Login and Setup<a class="headerlink" href="#first-login-and-setup" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>This page is for the study coordinator (Amey).</strong> It covers the one-time setup after CVAT is installed: creating SSH accounts for clinicians on the university PC, creating their CVAT accounts, and organising the project.</p>
+<p><strong>Clinicians:</strong> You do not need to read this. Go to <a href="../../clinicians/clinician-workflow/">Clinician Workflow</a> for your connection guide.</p>
+</blockquote>
+<hr />
+<h2 id="overview-of-what-you-need-to-set-up">Overview of What You Need to Set Up<a class="headerlink" href="#overview-of-what-you-need-to-set-up" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SSH account</strong> on the university PC</td>
+<td>Allows each clinician to securely connect from their own laptop</td>
+</tr>
+<tr>
+<td><strong>CVAT account</strong></td>
+<td>Allows each clinician to log in to the annotation tool</td>
+</tr>
+<tr>
+<td><strong>Organisation</strong> in CVAT</td>
+<td>Groups your project, tasks, and team together</td>
+</tr>
+<tr>
+<td><strong>Supervisor role</strong> in CVAT</td>
+<td>Allows clinicians to both annotate AND review each other's work</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="step-1-log-in-to-cvat-as-the-main-admin">Step 1 — Log In to CVAT as the Main Admin<a class="headerlink" href="#step-1-log-in-to-cvat-as-the-main-admin" title="Permanent link">&para;</a></h2>
+<ol>
+<li>On the university PC (or via your own SSH tunnel), open <strong>Google Chrome</strong>.</li>
+<li>Go to <code>http://localhost:8080</code>.</li>
+<li>Log in with the username and password you created during installation.</li>
+</ol>
+<hr />
+<h2 id="step-2-create-ssh-accounts-for-each-clinician">Step 2 — Create SSH Accounts for Each Clinician<a class="headerlink" href="#step-2-create-ssh-accounts-for-each-clinician" title="Permanent link">&para;</a></h2>
+<p>Each clinician needs an account on the university PC (Linux) to be able to connect via SSH.</p>
+<p>Open a terminal on the university PC and run (replace <code>clinician1</code> with the actual username):</p>
+<pre><code class="language-bash">sudo adduser clinician1
+</code></pre>
+<p>You will be prompted to set a password for that user. Write it down — you will share it with the clinician.</p>
+<p>Repeat for each clinician:</p>
+<pre><code class="language-bash">sudo adduser clinician2
+sudo adduser clinician3
+</code></pre>
+<blockquote>
+<p><strong>What to send each clinician:</strong>
+- The IP address of the university PC (e.g. <code>130.251.10.25</code>)
+- Their SSH username (e.g. <code>clinician1</code>)
+- Their SSH password
+- Their CVAT username and password (created in Step 4 below)
+- A link to the <a href="../../clinicians/clinician-workflow/">Clinician Workflow</a> page in this wiki</p>
+</blockquote>
+<hr />
+<h2 id="step-3-create-an-organisation-in-cvat">Step 3 — Create an Organisation in CVAT<a class="headerlink" href="#step-3-create-an-organisation-in-cvat" title="Permanent link">&para;</a></h2>
+<p>An Organisation groups your project and team together.</p>
+<ol>
+<li>Click your name/avatar in the <strong>top-right corner</strong> of CVAT.</li>
+<li>Select <strong>Create organization</strong>.</li>
+<li>Fill in:</li>
+<li><strong>Short name</strong> — no spaces (e.g. <code>polyp-study-2026</code>)</li>
+<li><strong>Full name</strong> — readable (e.g. <code>Endoscopy Polyp Study 2026</code>)</li>
+<li>Click <strong>Submit</strong>.</li>
+</ol>
+<hr />
+<h2 id="step-4-create-cvat-accounts-for-each-clinician">Step 4 — Create CVAT Accounts for Each Clinician<a class="headerlink" href="#step-4-create-cvat-accounts-for-each-clinician" title="Permanent link">&para;</a></h2>
+<p>You have two options:</p>
+<p><strong>Option A — You create the account (recommended for full control)</strong></p>
+<ol>
+<li>Go to <code>http://localhost:8080/admin/</code> in Chrome.</li>
+<li>Log in with your main account credentials.</li>
+<li>Click <strong>Users → Add user</strong>.</li>
+<li>Set a <strong>username</strong> and <strong>password</strong> for the clinician.</li>
+<li>Click <strong>Save and continue editing</strong>.</li>
+<li>Scroll down and ensure <strong>Staff status</strong> is NOT ticked (regular user).</li>
+<li>Click <strong>Save</strong>.</li>
+<li>Repeat for each clinician.</li>
+</ol>
+<p><strong>Option B — Clinician self-registers</strong></p>
+<ol>
+<li>Share the CVAT address with the clinician: when they open Chrome at <code>http://localhost:8080</code> they can click <strong>Create an account</strong>.</li>
+<li>Once they register, invite them to the organisation (Step 5 below) before they can see anything.</li>
+</ol>
+<hr />
+<h2 id="step-5-invite-clinicians-to-the-organisation-and-set-them-as-supervisors">Step 5 — Invite Clinicians to the Organisation and Set Them as Supervisors<a class="headerlink" href="#step-5-invite-clinicians-to-the-organisation-and-set-them-as-supervisors" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Critical:</strong> Clinicians must be set as <strong>Supervisors</strong> (not Workers) so they can both annotate their own tasks AND review and approve/reject other clinicians' tasks. Workers can only annotate their own assigned jobs.</p>
+</blockquote>
+<ol>
+<li>In CVAT, click your name in the top-right and switch to your organisation.</li>
+<li>Click the organisation name to open its settings.</li>
+<li>Go to the <strong>Members</strong> tab.</li>
+<li>Click <strong>Invite members</strong>.</li>
+<li>Enter the clinician's CVAT username.</li>
+<li>Set their role to <strong>Supervisor</strong>.</li>
+<li>Click <strong>Add</strong>.</li>
+</ol>
+<p>Repeat for each clinician.</p>
+<hr />
+<h2 id="step-6-verify-a-clinician-can-connect">Step 6 — Verify a Clinician Can Connect<a class="headerlink" href="#step-6-verify-a-clinician-can-connect" title="Permanent link">&para;</a></h2>
+<p>Ask one clinician to follow the <a href="../../clinicians/clinician-workflow/">Clinician Workflow</a> connection guide and confirm they can:
+1. Connect via SSH tunnel.
+2. Open <code>http://localhost:8080</code> in Chrome.
+3. Log in with their CVAT credentials.
+4. See the organisation name in their top-right menu.</p>
+<p>If they cannot log in or cannot see the organisation, check:
+- Their CVAT account exists and is correctly added to the organisation.
+- Their SSH credentials work (try connecting yourself with their username).</p>
+<hr />
+<h2 id="step-7-create-tasks-and-assign-them">Step 7 — Create Tasks and Assign Them<a class="headerlink" href="#step-7-create-tasks-and-assign-them" title="Permanent link">&para;</a></h2>
+<p>See <a href="../creating-projects-and-tasks/">Creating Projects and Tasks</a> for the full guide.</p>
+<p>Key point: after creating each task, assign it to the relevant clinician in the <strong>Assignee</strong> field of the job. The clinician will not see the task until it is assigned to them.</p>
+<hr />
+<h2 id="changing-a-clinicians-password">Changing a Clinician's Password<a class="headerlink" href="#changing-a-clinicians-password" title="Permanent link">&para;</a></h2>
+<p><strong>SSH password</strong> (Linux account):</p>
+<pre><code class="language-bash">sudo passwd clinician1
+</code></pre>
+<p><strong>CVAT password:</strong>
+1. Go to <code>http://localhost:8080/admin/</code>
+2. Click <strong>Users</strong>, find the clinician.
+3. Click <strong>Change password</strong> and set a new one.</p>
+<hr />
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../creating-projects-and-tasks/">Creating Projects and Tasks</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../creating-projects-and-tasks/" class="btn btn-neutral float-right" title="Creating Projects and Tasks">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../creating-projects-and-tasks/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

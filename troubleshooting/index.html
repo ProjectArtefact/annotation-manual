@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/troubleshooting/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Troubleshooting - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Troubleshooting";
+        var mkdocs_page_input_path = "troubleshooting.md";
+        var mkdocs_page_url = "/annotation-manual/troubleshooting/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../clinicians/clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clinicians/interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clinicians/video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clinicians/annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clinicians/ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clinicians/using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clinicians/video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../coordinator/system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../coordinator/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../coordinator/first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../coordinator/uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../coordinator/installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../coordinator/reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Troubleshooting</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#problems-clinicians-may-have">Problems Clinicians May Have</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-ssh-command-gives-an-error-ssh-is-not-recognized">"The SSH command gives an error / 'ssh is not recognized'"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#localhost8080-says-this-site-cant-be-reached-in-chrome">"localhost:8080 says 'This site can't be reached' in Chrome"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-see-a-message-about-authenticity-of-host-when-connecting">"I see a message about 'authenticity of host' when connecting"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-cant-see-any-tasks-in-my-task-list">"I can't see any tasks in my task list"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-cvat-page-wont-open-in-my-browser">"The CVAT page won't open in my browser"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-video-frame-is-blank-the-video-wont-load">"The video frame is blank / the video won't load"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#my-annotations-disappeared">"My annotations disappeared"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-ai-tool-magic-wand-is-missing-or-has-no-options">"The AI tool (magic wand) is missing or has no options"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sam-is-taking-a-very-long-time-more-than-10-seconds-per-click">"SAM is taking a very long time (more than 10 seconds per click)"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-accidentally-deleted-an-annotation-can-i-get-it-back">"I accidentally deleted an annotation — can I get it back?"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-cannot-change-the-task-stage-getting-a-permission-error-when-reviewing">"I cannot change the task stage (getting a permission error when reviewing)"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-brush-tool-is-not-painting-where-i-click">"The brush tool is not painting where I click"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#problems-the-person-who-set-up-cvat-may-have">Problems the Person Who Set Up CVAT May Have</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#cvat-wont-start-after-installation">CVAT won't start after installation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#port-8080-is-already-in-use-error">"Port 8080 is already in use" error</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clinicians-cannot-connect-from-other-computers">Clinicians cannot connect from other computers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#someone-cannot-see-their-tasks-has-no-access">Someone cannot see their tasks / has no access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#forgot-the-main-account-password">Forgot the main account password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ai-models-disappeared-after-the-server-restarted">AI models disappeared after the server restarted</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cvat-health-check-warning-about-disk-space">CVAT health check warning about disk space</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#still-stuck">Still stuck?</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/troubleshooting.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+<p>Solutions to the most common problems. If your issue is not listed here, contact <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a>.</p>
+<hr />
+<h2 id="problems-clinicians-may-have">Problems Clinicians May Have<a class="headerlink" href="#problems-clinicians-may-have" title="Permanent link">&para;</a></h2>
+<h3 id="the-ssh-command-gives-an-error-ssh-is-not-recognized">"The SSH command gives an error / 'ssh is not recognized'"<a class="headerlink" href="#the-ssh-command-gives-an-error-ssh-is-not-recognized" title="Permanent link">&para;</a></h3>
+<p><strong>On Windows:</strong> Command Prompt and PowerShell have SSH built in on Windows 10 and 11. If you get "ssh is not recognized", your Windows version may be older. Use PuTTY instead — see <a href="../clinicians/clinician-workflow/#alternative-using-putty-on-windows">Using PuTTY on Windows</a>.</p>
+<p><strong>Connection refused error:</strong> The server may be offline or the IP address may have changed. Email <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a>.</p>
+<p><strong>Permission denied (wrong password):</strong> Make sure you are typing the <strong>SSH</strong> password, not the CVAT password — these are two different passwords. Ask the coordinator to confirm or reset your SSH password.</p>
+<hr />
+<h3 id="localhost8080-says-this-site-cant-be-reached-in-chrome">"localhost:8080 says 'This site can't be reached' in Chrome"<a class="headerlink" href="#localhost8080-says-this-site-cant-be-reached-in-chrome" title="Permanent link">&para;</a></h3>
+<p>The SSH tunnel is not active. Check:
+1. Your terminal or Command Prompt window is still open — it <strong>must</strong> stay open while you use CVAT.
+2. The SSH command finished and shows a <code>$</code> prompt. If it timed out or you closed the window, re-run the SSH command and refresh Chrome.
+3. Make sure you typed <code>http://localhost:8080</code> — not <code>https://</code> and not just <code>localhost</code>.</p>
+<hr />
+<h3 id="i-see-a-message-about-authenticity-of-host-when-connecting">"I see a message about 'authenticity of host' when connecting"<a class="headerlink" href="#i-see-a-message-about-authenticity-of-host-when-connecting" title="Permanent link">&para;</a></h3>
+<p>This is a normal first-time security check. Type <code>yes</code> and press Enter. You will only see it once.</p>
+<hr />
+<h3 id="i-cant-see-any-tasks-in-my-task-list">"I can't see any tasks in my task list"<a class="headerlink" href="#i-cant-see-any-tasks-in-my-task-list" title="Permanent link">&para;</a></h3>
+<p><strong>Cause 1 — You are not in the right study group.</strong>
+1. Click your name/avatar in the <strong>top-right corner</strong>.
+2. Look for an <strong>Organization</strong> section in the dropdown.
+3. Click the study name to switch into it.
+4. Your tasks should now appear.</p>
+<p><strong>Cause 2 — No tasks have been assigned to you yet.</strong>
+Contact your study coordinator.</p>
+<hr />
+<h3 id="the-cvat-page-wont-open-in-my-browser">"The CVAT page won't open in my browser"<a class="headerlink" href="#the-cvat-page-wont-open-in-my-browser" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Make sure you are using <strong>Google Chrome</strong> — CVAT does not work in Firefox, Safari, or Edge.</li>
+<li>Check that you typed the address correctly (e.g. <code>http://192.168.1.50:8080</code>).</li>
+<li>Check that the server computer is switched on and connected to the network.</li>
+<li>If using a laptop connected to a different Wi-Fi network than the server, you may not be able to connect. Ask your study coordinator.</li>
+</ul>
+<hr />
+<h3 id="the-video-frame-is-blank-the-video-wont-load">"The video frame is blank / the video won't load"<a class="headerlink" href="#the-video-frame-is-blank-the-video-wont-load" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Try a hard refresh: press <code>Ctrl + Shift + R</code> (Windows) or <code>Cmd + Shift + R</code> (Mac).</li>
+<li>If still blank, the video file may be in a format CVAT cannot display. Let your study coordinator know.</li>
+</ol>
+<hr />
+<h3 id="my-annotations-disappeared">"My annotations disappeared"<a class="headerlink" href="#my-annotations-disappeared" title="Permanent link">&para;</a></h3>
+<p>CVAT does <strong>not</strong> auto-save. If you navigated away or the session timed out before saving, your most recent changes may be lost.</p>
+<ul>
+<li>Always save with <strong><code>Ctrl + S</code></strong> every 5–10 frames.</li>
+<li>Annotations you saved before the session ended are still there — only changes made since the last save are lost.</li>
+</ul>
+<hr />
+<h3 id="the-ai-tool-magic-wand-is-missing-or-has-no-options">"The AI tool (magic wand) is missing or has no options"<a class="headerlink" href="#the-ai-tool-magic-wand-is-missing-or-has-no-options" title="Permanent link">&para;</a></h3>
+<p>The AI tools have not been set up on the server yet. Contact your study coordinator to set them up (see <a href="../coordinator/installing-ai-models/">Installing AI Models</a>).</p>
+<hr />
+<h3 id="sam-is-taking-a-very-long-time-more-than-10-seconds-per-click">"SAM is taking a very long time (more than 10 seconds per click)"<a class="headerlink" href="#sam-is-taking-a-very-long-time-more-than-10-seconds-per-click" title="Permanent link">&para;</a></h3>
+<p>This is expected on a server without a GPU. The AI still works — it is just slower. If speed is a problem, let your study coordinator know so they can look into a GPU upgrade.</p>
+<hr />
+<h3 id="i-accidentally-deleted-an-annotation-can-i-get-it-back">"I accidentally deleted an annotation — can I get it back?"<a class="headerlink" href="#i-accidentally-deleted-an-annotation-can-i-get-it-back" title="Permanent link">&para;</a></h3>
+<p>Press <strong><code>Ctrl + Z</code></strong> immediately to undo. This works as long as you have not saved yet.</p>
+<p>If you have already saved after the deletion, the annotation cannot be recovered. You will need to draw it again.</p>
+<hr />
+<h3 id="i-cannot-change-the-task-stage-getting-a-permission-error-when-reviewing">"I cannot change the task stage (getting a permission error when reviewing)"<a class="headerlink" href="#i-cannot-change-the-task-stage-getting-a-permission-error-when-reviewing" title="Permanent link">&para;</a></h3>
+<p>Your CVAT account has the <strong>Worker</strong> role instead of <strong>Supervisor</strong>. Workers can only annotate their own tasks — they cannot change task stages.</p>
+<p>Contact <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a> and ask to have your role changed to <strong>Supervisor</strong> in the organisation.</p>
+<hr />
+<h3 id="the-brush-tool-is-not-painting-where-i-click">"The brush tool is not painting where I click"<a class="headerlink" href="#the-brush-tool-is-not-painting-where-i-click" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Make sure you clicked on the <strong>canvas</strong> (the video image itself), not on the toolbar or panel.</li>
+<li>Press <code>Esc</code> first to cancel any active mode, then press <code>B</code> to reactivate the brush.</li>
+<li>Try zooming in: press <code>+</code> or scroll up with the mouse wheel.</li>
+</ul>
+<hr />
+<h2 id="problems-the-person-who-set-up-cvat-may-have">Problems the Person Who Set Up CVAT May Have<a class="headerlink" href="#problems-the-person-who-set-up-cvat-may-have" title="Permanent link">&para;</a></h2>
+<h3 id="cvat-wont-start-after-installation">CVAT won't start after installation<a class="headerlink" href="#cvat-wont-start-after-installation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Check Docker is running: open Docker Desktop (Windows/Mac) or run <code>docker info</code> in a terminal.</li>
+<li>Check for error messages: <code>docker compose logs</code></li>
+<li>Check free disk space — CVAT needs at least 20 GB free: <code>df -h</code> (Linux/Mac)</li>
+<li>Restart Docker and try again: <code>docker compose down</code> then <code>docker compose up -d</code></li>
+</ol>
+<hr />
+<h3 id="port-8080-is-already-in-use-error">"Port 8080 is already in use" error<a class="headerlink" href="#port-8080-is-already-in-use-error" title="Permanent link">&para;</a></h3>
+<p>Another application on the server is using port 8080.</p>
+<p><strong>Find and stop the conflicting app:</strong>
+- Linux/Mac: <code>sudo lsof -i :8080</code>
+- Windows: <code>netstat -ano | findstr 8080</code></p>
+<p>Or change CVAT to use a different port by editing <code>docker-compose.yml</code> and changing <code>"8080:80"</code> to <code>"8090:80"</code> — then access CVAT at port 8090.</p>
+<hr />
+<h3 id="clinicians-cannot-connect-from-other-computers">Clinicians cannot connect from other computers<a class="headerlink" href="#clinicians-cannot-connect-from-other-computers" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure you set <code>CVAT_HOST</code> to the server's IP address <strong>before</strong> starting CVAT (see the <a href="../coordinator/installation/">Installation</a> guide).</li>
+<li>On Linux: allow the port through the firewall: <code>sudo ufw allow 8080</code></li>
+<li>Confirm the server's IP address has not changed (e.g. after a restart). If it has, stop CVAT, update the IP address, and restart.</li>
+</ol>
+<hr />
+<h3 id="someone-cannot-see-their-tasks-has-no-access">Someone cannot see their tasks / has no access<a class="headerlink" href="#someone-cannot-see-their-tasks-has-no-access" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure they have been added to the organisation: go to the organisation settings → <strong>Members</strong> tab → add them.</li>
+<li>Make sure their task is assigned to them: open the task → expand the job → set the <strong>Assignee</strong> field to their username.</li>
+</ol>
+<hr />
+<h3 id="forgot-the-main-account-password">Forgot the main account password<a class="headerlink" href="#forgot-the-main-account-password" title="Permanent link">&para;</a></h3>
+<p>Run this command on the server (replace <code>yourusername</code> with the actual username):</p>
+<pre><code class="language-bash">docker exec -it cvat_server bash -ic 'python3 ~/manage.py changepassword yourusername'
+</code></pre>
+<hr />
+<h3 id="ai-models-disappeared-after-the-server-restarted">AI models disappeared after the server restarted<a class="headerlink" href="#ai-models-disappeared-after-the-server-restarted" title="Permanent link">&para;</a></h3>
+<p>This is expected — AI models do not restart automatically. After every server restart:</p>
+<ol>
+<li>Start CVAT with the AI compose command (see <a href="../coordinator/installing-ai-models/#restarting-after-the-server-reboots">Installing AI Models</a>).</li>
+<li>Redeploy the models using the deploy scripts.</li>
+</ol>
+<hr />
+<h3 id="cvat-health-check-warning-about-disk-space">CVAT health check warning about disk space<a class="headerlink" href="#cvat-health-check-warning-about-disk-space" title="Permanent link">&para;</a></h3>
+<pre><code>DiskUsage warning: 94% disk usage exceeds 90%
+</code></pre>
+<p>Free up disk space on the server, or run:</p>
+<pre><code class="language-bash">export CVAT_HEALTH_DISK_USAGE_MAX=95
+docker compose down &amp;&amp; docker compose up -d
+</code></pre>
+<hr />
+<h2 id="still-stuck">Still stuck?<a class="headerlink" href="#still-stuck" title="Permanent link">&para;</a></h2>
+<p>Contact <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a> or check the official CVAT documentation at <a href="https://docs.cvat.ai">docs.cvat.ai</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../coordinator/reviewing-and-exporting/" class="btn btn-neutral float-left" title="Reviewing and Exporting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../coordinator/reviewing-and-exporting/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

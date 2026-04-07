@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/clinicians/annotation-types/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Annotation Types - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Annotation Types";
+        var mkdocs_page_input_path = "clinicians/annotation-types.md";
+        var mkdocs_page_url = "/annotation-manual/clinicians/annotation-types/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Annotation Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why-we-use-segmentation-masks">Why We Use Segmentation Masks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mask-brush-tool-primary-annotation-type">Mask (Brush Tool) — Primary Annotation Type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-available-shape-types">Other Available Shape Types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bounding-box-rectangle">Bounding Box (Rectangle)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#polygon">Polygon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tag-frame-level-label">Tag (Frame-Level Label)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-shapes-polyline-points-ellipse">Other Shapes (Polyline, Points, Ellipse)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#annotation-format-for-this-project">Annotation Format for This Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For Clinicians</li>
+      <li class="breadcrumb-item active">Annotation Types</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/clinicians/annotation-types.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="annotation-types">Annotation Types<a class="headerlink" href="#annotation-types" title="Permanent link">&para;</a></h1>
+<p>For this project, the primary annotation type is the <strong>segmentation mask</strong>. This section explains what a mask is, how to draw one, and briefly describes the other shape types that are available if needed.</p>
+<hr />
+<h2 id="why-we-use-segmentation-masks">Why We Use Segmentation Masks<a class="headerlink" href="#why-we-use-segmentation-masks" title="Permanent link">&para;</a></h2>
+<p>A segmentation mask paints over the exact pixels that make up a structure (e.g. a polyp, lesion, or instrument). This is the annotation format required for training deep learning segmentation models, and it gives the most precise boundary information for clinical analysis.</p>
+<blockquote>
+<p><strong>For this project: always annotate using the Mask (brush) tool unless your project lead specifies otherwise.</strong></p>
+</blockquote>
+<hr />
+<h2 id="mask-brush-tool-primary-annotation-type">Mask (Brush Tool) — Primary Annotation Type<a class="headerlink" href="#mask-brush-tool-primary-annotation-type" title="Permanent link">&para;</a></h2>
+<p>A mask paints directly on the pixels of the object, giving a pixel-precise outline.</p>
+<p><strong>Keyboard shortcut:</strong> <code>B</code></p>
+<p><strong>How to draw a mask:</strong></p>
+<ol>
+<li>Press <code>B</code> or click the <strong>brush icon</strong> in the left panel.</li>
+<li>Select the correct <strong>label</strong> (e.g. "polyp") from the label dropdown.</li>
+<li>Make sure the mode at the top of the tool panel is set to <strong>Track</strong> (for video) — not Shape.</li>
+<li><strong>Paint over the object</strong> by clicking and dragging your mouse across it. The mask appears as a coloured overlay.</li>
+<li>Adjust the <strong>brush size</strong> using the slider in the tool panel — use a larger brush for filling large areas and a smaller brush for fine edges.</li>
+<li>If you accidentally painted outside the object, switch to the <strong>Eraser</strong> (within the same tool panel) and erase the unwanted area.</li>
+<li>When done, click <strong>Apply</strong> (or press <code>N</code>) to confirm the mask.</li>
+</ol>
+<p><strong>Tips for accurate masks:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in first</td>
+<td>Press <code>+</code> or scroll the mouse wheel to zoom in before painting fine edges</td>
+</tr>
+<tr>
+<td>Use eraser for edges</td>
+<td>Paint slightly over the edge, then erase back to the exact boundary</td>
+</tr>
+<tr>
+<td>Polygon fill shortcut</td>
+<td>Instead of painting stroke by stroke, click the <strong>polygon</strong> option within the mask tool — trace an outline by clicking, then the tool fills the entire area automatically</td>
+</tr>
+<tr>
+<td>Check the outline</td>
+<td>After applying, zoom in around the edges to check for gaps or overspill</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="other-available-shape-types">Other Available Shape Types<a class="headerlink" href="#other-available-shape-types" title="Permanent link">&para;</a></h2>
+<p>These are available in CVAT but are secondary to masks for this project. Use them only when instructed by the project lead.</p>
+<h3 id="bounding-box-rectangle">Bounding Box (Rectangle)<a class="headerlink" href="#bounding-box-rectangle" title="Permanent link">&para;</a></h3>
+<p>A rectangular box that roughly surrounds an object. Fast to draw but imprecise — does not capture the exact object shape.</p>
+<p><strong>Keyboard shortcut:</strong> <code>R</code></p>
+<p><strong>How to draw:</strong> Click and drag across the object. Release to finish.</p>
+<p><strong>Use when:</strong> Quick rough localisation is sufficient, or the object is too small/fast-moving to mask accurately.</p>
+<hr />
+<h3 id="polygon">Polygon<a class="headerlink" href="#polygon" title="Permanent link">&para;</a></h3>
+<p>Trace the exact outline of an object by clicking to place corner points around its edge. More precise than a bounding box but less precise than a mask.</p>
+<p><strong>Keyboard shortcut:</strong> <code>N</code></p>
+<p><strong>How to draw:</strong>
+1. Press <code>N</code> and select the label and Track mode.
+2. Click around the object's edge to place points.
+3. Double-click (or press <code>N</code> again) to close and finish the polygon.</p>
+<p><strong>Editing:</strong> Click and drag any corner point to refine. Click on the edge between points and drag to add a new point.</p>
+<p><strong>Use when:</strong> A clean polygon outline is preferred over a painted mask for a particular structure.</p>
+<hr />
+<h3 id="tag-frame-level-label">Tag (Frame-Level Label)<a class="headerlink" href="#tag-frame-level-label" title="Permanent link">&para;</a></h3>
+<p>Applies a label to the whole frame without drawing any shape. Nothing is drawn on the canvas.</p>
+<p><strong>How to apply:</strong> Click the <strong>tag icon</strong> (flag) in the left panel, then select the label.</p>
+<p><strong>Use when:</strong>
+- Marking a frame as having <strong>poor image quality</strong>, <strong>motion blur</strong>, or <strong>artefacts</strong>.
+- Flagging frames that <strong>need review</strong>.
+- Classifying the frame content overall (e.g. "retroflexion view").</p>
+<hr />
+<h3 id="other-shapes-polyline-points-ellipse">Other Shapes (Polyline, Points, Ellipse)<a class="headerlink" href="#other-shapes-polyline-points-ellipse" title="Permanent link">&para;</a></h3>
+<p>These are available in CVAT but are unlikely to be needed for this project. Contact the project lead if you believe one of these is required for a specific annotation task.</p>
+<hr />
+<h2 id="annotation-format-for-this-project">Annotation Format for This Project<a class="headerlink" href="#annotation-format-for-this-project" title="Permanent link">&para;</a></h2>
+<p>All annotations exported from this project will use <strong>COCO format</strong> — the standard format for training segmentation models. CVAT handles the conversion automatically when you export.</p>
+<ul>
+<li><strong>Masks</strong> → exported as polygon contours or RLE-encoded masks in COCO JSON format.</li>
+<li><strong>Bounding boxes</strong> → exported as bounding box annotations in COCO JSON format.</li>
+</ul>
+<p>See <a href="../../coordinator/reviewing-and-exporting/">Reviewing and Exporting Annotations</a> for export instructions.</p>
+<hr />
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../ai-assisted-annotation-overview/">AI-Assisted Annotation — Overview</a> — use AI to draw masks faster</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../video-annotation-basics/" class="btn btn-neutral float-left" title="Video Annotation Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ai-assisted-annotation-overview/" class="btn btn-neutral float-right" title="AI-Assisted Annotation Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../video-annotation-basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ai-assisted-annotation-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

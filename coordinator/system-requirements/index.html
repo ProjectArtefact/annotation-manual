@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/coordinator/system-requirements/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>System Requirements - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "System Requirements";
+        var mkdocs_page_input_path = "coordinator/system-requirements.md";
+        var mkdocs_page_url = "/annotation-manual/coordinator/system-requirements/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">System Requirements</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-computer-running-cvat-the-server">The Computer Running CVAT (the "server")</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#if-you-want-to-use-the-ai-tools-recommended">If you want to use the AI tools (recommended)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-computers-used-for-annotating-clinician-workstations">The Computers Used for Annotating (clinician workstations)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For the Coordinator</li>
+      <li class="breadcrumb-item active">System Requirements</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/coordinator/system-requirements.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>This page is for the study coordinator</strong> who will be installing and running CVAT. Clinicians who are only annotating do not need to read this — you just need Google Chrome on your computer.</p>
+</blockquote>
+<hr />
+<h2 id="the-computer-running-cvat-the-server">The Computer Running CVAT (the "server")<a class="headerlink" href="#the-computer-running-cvat-the-server" title="Permanent link">&para;</a></h2>
+<p>This can be any computer that stays switched on while annotators are working. It does not need to be a dedicated server — a regular desktop or laptop works fine for small teams.</p>
+<table>
+<thead>
+<tr>
+<th>What you need</th>
+<th>Minimum</th>
+<th>Ideal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Memory (RAM)</strong></td>
+<td>8 GB</td>
+<td>16 GB or more</td>
+</tr>
+<tr>
+<td><strong>Free disk space</strong></td>
+<td>50 GB</td>
+<td>200 GB+ (more if you have lots of videos)</td>
+</tr>
+<tr>
+<td><strong>Processor (CPU)</strong></td>
+<td>4 cores</td>
+<td>8+ cores</td>
+</tr>
+<tr>
+<td><strong>Operating system</strong></td>
+<td>Windows 10, macOS, or Ubuntu Linux</td>
+<td>Ubuntu 22.04</td>
+</tr>
+<tr>
+<td><strong>Internet</strong></td>
+<td>Needed during installation only</td>
+<td>Not needed afterwards</td>
+</tr>
+</tbody>
+</table>
+<h3 id="if-you-want-to-use-the-ai-tools-recommended">If you want to use the AI tools (recommended)<a class="headerlink" href="#if-you-want-to-use-the-ai-tools-recommended" title="Permanent link">&para;</a></h3>
+<p>The AI segmentation tool (SAM) works on any computer but runs much faster with a graphics card (GPU):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Without a GPU</th>
+<th>With an NVIDIA GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI speed</strong></td>
+<td>3–10 seconds per click</td>
+<td>Under 1 second per click</td>
+</tr>
+<tr>
+<td><strong>GPU memory needed</strong></td>
+<td>Not applicable</td>
+<td>8 GB or more</td>
+</tr>
+</tbody>
+</table>
+<p>If the computer does not have an NVIDIA GPU, the AI tools will still work — they will just be a bit slower.</p>
+<hr />
+<h2 id="the-computers-used-for-annotating-clinician-workstations">The Computers Used for Annotating (clinician workstations)<a class="headerlink" href="#the-computers-used-for-annotating-clinician-workstations" title="Permanent link">&para;</a></h2>
+<p>Clinicians do not install anything. They only need:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Browser</strong></td>
+<td><strong>Google Chrome</strong> — this is the only browser that works with CVAT</td>
+</tr>
+<tr>
+<td><strong>Screen</strong></td>
+<td>1920 × 1080 resolution or larger recommended</td>
+</tr>
+<tr>
+<td><strong>Mouse</strong></td>
+<td>A standard mouse; a scroll wheel helps for zooming</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>Must be able to connect to the computer where CVAT is installed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../installation/">Installation</a> — install CVAT on your computer</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../clinicians/video-object-tracking/" class="btn btn-neutral float-left" title="Video Object Tracking"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../installation/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../../clinicians/video-object-tracking/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

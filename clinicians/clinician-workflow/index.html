@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/clinicians/clinician-workflow/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Connecting + Annotating + Reviewing - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Connecting + Annotating + Reviewing";
+        var mkdocs_page_input_path = "clinicians/clinician-workflow.md";
+        var mkdocs_page_url = "/annotation-manual/clinicians/clinician-workflow/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Connecting + Annotating + Reviewing</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-the-ssh-tunnel">What Is the SSH Tunnel?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#every-session-quick-start">Every-Session Quick Start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-for-the-first-time-mac">Connecting for the First Time — Mac</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-open-the-terminal-app">Step 1 — Open the Terminal app</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-type-the-ssh-command">Step 2 — Type the SSH command</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-first-time-security-question">Step 3 — First-time security question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-enter-your-ssh-password">Step 4 — Enter your SSH password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-you-are-connected">Step 5 — You are connected</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-6-open-cvat-in-chrome">Step 6 — Open CVAT in Chrome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-you-are-done">When You Are Done</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-for-the-first-time-windows">Connecting for the First Time — Windows</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-open-command-prompt">Step 1 — Open Command Prompt</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-type-the-ssh-command_1">Step 2 — Type the SSH command</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-first-time-security-question_1">Step 3 — First-time security question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-enter-your-ssh-password_1">Step 4 — Enter your SSH password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-you-are-connected_1">Step 5 — You are connected</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-6-open-cvat-in-chrome_1">Step 6 — Open CVAT in Chrome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-you-are-done_1">When You Are Done</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#alternative-using-putty-on-windows">Alternative: Using PuTTY on Windows</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logging-in-to-cvat">Logging In to CVAT</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finding-your-assigned-task">Finding Your Assigned Task</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#annotating-your-task">Annotating Your Task</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finishing-your-annotation-task">Finishing Your Annotation Task</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reviewing-another-clinicians-work">Reviewing Another Clinician's Work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-connect-and-log-in">Step 1 — Connect and log in</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-find-the-task-to-review">Step 2 — Find the task to review</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-signal-that-you-are-reviewing-it">Step 3 — Signal that you are reviewing it</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-open-and-review-the-annotations">Step 4 — Open and review the annotations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-accept-or-send-back">Step 5 — Accept or send back</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#responding-to-review-feedback-when-your-work-is-sent-back">Responding to Review Feedback (When Your Work Is Sent Back)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-happens-to-the-annotations">What Happens to the Annotations?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#common-questions">Common Questions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For Clinicians</li>
+      <li class="breadcrumb-item active">Connecting + Annotating + Reviewing</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/clinicians/clinician-workflow.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="clinician-guide-connecting-annotating-and-reviewing">Clinician Guide: Connecting, Annotating, and Reviewing<a class="headerlink" href="#clinician-guide-connecting-annotating-and-reviewing" title="Permanent link">&para;</a></h1>
+<p>This is the main guide for clinicians. It covers everything from connecting to CVAT for the first time, through annotating your assigned videos, to reviewing a colleague's work.</p>
+<p><strong>Jump to the section you need:</strong></p>
+<ul>
+<li><a href="#every-session-quick-start">Every-session quick start</a></li>
+<li><a href="#connecting-for-the-first-time-mac">Connecting for the first time — Mac</a></li>
+<li><a href="#connecting-for-the-first-time-windows">Connecting for the first time — Windows</a></li>
+<li><a href="#logging-in-to-cvat">Logging In to CVAT</a></li>
+<li><a href="#finding-your-assigned-task">Finding Your Assigned Task</a></li>
+<li><a href="#finishing-your-annotation-task">Finishing Your Annotation Task</a></li>
+<li><a href="#reviewing-another-clinicians-work">Reviewing Another Clinician's Work</a></li>
+<li><a href="#common-questions">Common Questions</a></li>
+</ul>
+<hr />
+<h2 id="what-is-the-ssh-tunnel">What Is the SSH Tunnel?<a class="headerlink" href="#what-is-the-ssh-tunnel" title="Permanent link">&para;</a></h2>
+<p>CVAT runs on a university PC. To access it securely from your own laptop, you create an <strong>SSH tunnel</strong> — think of it as a private, encrypted phone call between your laptop and the university PC. While the call is connected, CVAT appears at a normal web address in Chrome. When you hang up (close the terminal), CVAT stops being accessible.</p>
+<p>You need to do this <strong>every time</strong> you want to use CVAT.</p>
+<hr />
+<h2 id="every-session-quick-start">Every-Session Quick Start<a class="headerlink" href="#every-session-quick-start" title="Permanent link">&para;</a></h2>
+<p>Once you have connected for the first time (see below), here is all you need to do each session:</p>
+<blockquote>
+<p><strong>What the coordinator will give you (save these somewhere):</strong>
+- <strong>IP address</strong> of the university PC — e.g. <code>130.251.10.25</code>
+- <strong>SSH username</strong> — e.g. <code>clinician1</code>
+- <strong>SSH password</strong>
+- <strong>CVAT username</strong> and <strong>CVAT password</strong> <em>(these are different from your SSH password)</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Mac</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Open a terminal</td>
+<td>Press <code>Cmd+Space</code>, type <code>Terminal</code>, press Enter</td>
+<td>Press <code>Win</code> key, type <code>cmd</code>, press Enter</td>
+</tr>
+<tr>
+<td>2. Run the SSH command</td>
+<td><code>ssh -L 8080:localhost:8080 YOUR-USERNAME@IP-ADDRESS</code></td>
+<td><code>ssh -L 8080:localhost:8080 YOUR-USERNAME@IP-ADDRESS</code></td>
+</tr>
+<tr>
+<td>3. Enter your SSH password</td>
+<td>Type it (nothing appears — this is normal)</td>
+<td>Type it (nothing appears — this is normal)</td>
+</tr>
+<tr>
+<td>4. Keep the terminal open</td>
+<td>Do not close this window</td>
+<td>Do not close this window</td>
+</tr>
+<tr>
+<td>5. Open Chrome</td>
+<td>Go to <code>http://localhost:8080</code></td>
+<td>Go to <code>http://localhost:8080</code></td>
+</tr>
+<tr>
+<td>6. Log in</td>
+<td>Use your <strong>CVAT</strong> username and password</td>
+<td>Use your <strong>CVAT</strong> username and password</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="connecting-for-the-first-time-mac">Connecting for the First Time — Mac<a class="headerlink" href="#connecting-for-the-first-time-mac" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-open-the-terminal-app">Step 1 — Open the Terminal app<a class="headerlink" href="#step-1-open-the-terminal-app" title="Permanent link">&para;</a></h3>
+<p>The Terminal is a built-in app on every Mac. You do not need to install anything.</p>
+<ol>
+<li>Press <strong><code>Command (⌘) + Space</code></strong> together to open Spotlight Search.</li>
+<li>Type <strong><code>Terminal</code></strong>.</li>
+<li>Press <strong>Enter</strong>.</li>
+</ol>
+<p>A white or black window opens with a blinking cursor. This is the Terminal. It looks plain and technical but you only need to type one command.</p>
+<hr />
+<h3 id="step-2-type-the-ssh-command">Step 2 — Type the SSH command<a class="headerlink" href="#step-2-type-the-ssh-command" title="Permanent link">&para;</a></h3>
+<p>Click inside the terminal window so it is active. Carefully type the command below — <strong>replace</strong> <code>YOUR-USERNAME</code> and <code>IP-ADDRESS</code> with the details the coordinator gave you:</p>
+<pre><code>ssh -L 8080:localhost:8080 YOUR-USERNAME@IP-ADDRESS
+</code></pre>
+<p><strong>Filled-in example</strong> (your values will be different):</p>
+<pre><code>ssh -L 8080:localhost:8080 clinician1@130.251.10.25
+</code></pre>
+<p>Press <strong>Enter</strong>.</p>
+<blockquote>
+<p><strong>Common mistake:</strong> Make sure there are no extra spaces and no line breaks. The whole command goes on one line.</p>
+</blockquote>
+<hr />
+<h3 id="step-3-first-time-security-question">Step 3 — First-time security question<a class="headerlink" href="#step-3-first-time-security-question" title="Permanent link">&para;</a></h3>
+<p>The very first time you connect, you will see a message like this:</p>
+<pre><code>The authenticity of host '130.251.10.25' can't be established.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</code></pre>
+<p>Type <strong><code>yes</code></strong> and press Enter. You will only see this once — it will not ask again on future connections.</p>
+<hr />
+<h3 id="step-4-enter-your-ssh-password">Step 4 — Enter your SSH password<a class="headerlink" href="#step-4-enter-your-ssh-password" title="Permanent link">&para;</a></h3>
+<p>You will see:</p>
+<pre><code>clinician1@130.251.10.25's password:
+</code></pre>
+<p>Type your <strong>SSH password</strong> (the one the coordinator gave you) and press Enter.</p>
+<blockquote>
+<p><strong>Important:</strong> As you type the password, nothing appears on screen — no dots, no asterisks. This is normal and intentional. Just type it carefully and press Enter.</p>
+</blockquote>
+<hr />
+<h3 id="step-5-you-are-connected">Step 5 — You are connected<a class="headerlink" href="#step-5-you-are-connected" title="Permanent link">&para;</a></h3>
+<p>If the password is correct, you will see something like:</p>
+<pre><code>Welcome to Ubuntu 22.04 LTS
+clinician1@cvat-server:~$
+</code></pre>
+<p>The <code>$</code> at the end means the connection is active and working.</p>
+<blockquote>
+<p><strong>Do not close this Terminal window</strong> while you are using CVAT. Keep it open in the background — you can minimise it. If you accidentally close it, just repeat Steps 1–5.</p>
+</blockquote>
+<hr />
+<h3 id="step-6-open-cvat-in-chrome">Step 6 — Open CVAT in Chrome<a class="headerlink" href="#step-6-open-cvat-in-chrome" title="Permanent link">&para;</a></h3>
+<p>Open <strong>Google Chrome</strong> (not Safari, not Firefox). Type this address in the address bar:</p>
+<pre><code>http://localhost:8080
+</code></pre>
+<p>Press Enter. The CVAT login page should appear. If it does not, check that the Terminal window is still open and the SSH command completed successfully.</p>
+<hr />
+<h3 id="when-you-are-done">When You Are Done<a class="headerlink" href="#when-you-are-done" title="Permanent link">&para;</a></h3>
+<p>When you have finished annotating for the session:
+1. Save your work in CVAT: <strong><code>Cmd + S</code></strong>
+2. Close the Chrome tab.
+3. Go back to the Terminal window and type <code>exit</code>, then press Enter — or simply close the Terminal window.</p>
+<hr />
+<h2 id="connecting-for-the-first-time-windows">Connecting for the First Time — Windows<a class="headerlink" href="#connecting-for-the-first-time-windows" title="Permanent link">&para;</a></h2>
+<p>Most Windows computers (Windows 10 and Windows 11) have SSH built in. You access it through the <strong>Command Prompt</strong> — a window where you type simple commands.</p>
+<blockquote>
+<p><strong>If the SSH command does not work</strong> (you get an error saying it is not recognised), skip to <a href="#alternative-using-putty-on-windows">Using PuTTY instead</a> at the bottom of this section.</p>
+</blockquote>
+<hr />
+<h3 id="step-1-open-command-prompt">Step 1 — Open Command Prompt<a class="headerlink" href="#step-1-open-command-prompt" title="Permanent link">&para;</a></h3>
+<p><strong>Option A — Start menu:</strong>
+1. Click the <strong>Start button</strong> (Windows logo, bottom-left).
+2. Type <strong><code>cmd</code></strong>.
+3. Click <strong>Command Prompt</strong> in the results.</p>
+<p><strong>Option B — Keyboard shortcut:</strong>
+1. Press <strong><code>Windows key + R</code></strong> together.
+2. Type <strong><code>cmd</code></strong> and press Enter.</p>
+<p>A black window with white text opens, ending with something like <code>C:\Users\YourName&gt;</code>. This is the Command Prompt.</p>
+<hr />
+<h3 id="step-2-type-the-ssh-command_1">Step 2 — Type the SSH command<a class="headerlink" href="#step-2-type-the-ssh-command_1" title="Permanent link">&para;</a></h3>
+<p>Click inside the Command Prompt window. Type the command below — <strong>replace</strong> <code>YOUR-USERNAME</code> and <code>IP-ADDRESS</code> with what the coordinator gave you:</p>
+<pre><code>ssh -L 8080:localhost:8080 YOUR-USERNAME@IP-ADDRESS
+</code></pre>
+<p><strong>Filled-in example</strong> (your values will be different):</p>
+<pre><code>ssh -L 8080:localhost:8080 clinician1@130.251.10.25
+</code></pre>
+<p>Press <strong>Enter</strong>.</p>
+<blockquote>
+<p><strong>Tip:</strong> You can right-click inside the Command Prompt window to paste if you have copied the command.</p>
+</blockquote>
+<hr />
+<h3 id="step-3-first-time-security-question_1">Step 3 — First-time security question<a class="headerlink" href="#step-3-first-time-security-question_1" title="Permanent link">&para;</a></h3>
+<p>The very first time you connect, you will see:</p>
+<pre><code>The authenticity of host '130.251.10.25' can't be established.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</code></pre>
+<p>Type <strong><code>yes</code></strong> and press Enter. This only appears once.</p>
+<hr />
+<h3 id="step-4-enter-your-ssh-password_1">Step 4 — Enter your SSH password<a class="headerlink" href="#step-4-enter-your-ssh-password_1" title="Permanent link">&para;</a></h3>
+<p>You will see:</p>
+<pre><code>clinician1@130.251.10.25's password:
+</code></pre>
+<p>Type your <strong>SSH password</strong> and press Enter.</p>
+<blockquote>
+<p><strong>Important:</strong> Nothing appears as you type — no dots, no asterisks. This is completely normal. Type your password carefully and press Enter.</p>
+</blockquote>
+<hr />
+<h3 id="step-5-you-are-connected_1">Step 5 — You are connected<a class="headerlink" href="#step-5-you-are-connected_1" title="Permanent link">&para;</a></h3>
+<p>If successful, you will see something like:</p>
+<pre><code>Welcome to Ubuntu 22.04 LTS
+clinician1@cvat-server:~$
+</code></pre>
+<p>The <code>$</code> sign means you are connected.</p>
+<blockquote>
+<p><strong>Do not close this Command Prompt window</strong> while using CVAT. Minimise it and leave it running in the background.</p>
+</blockquote>
+<hr />
+<h3 id="step-6-open-cvat-in-chrome_1">Step 6 — Open CVAT in Chrome<a class="headerlink" href="#step-6-open-cvat-in-chrome_1" title="Permanent link">&para;</a></h3>
+<p>Open <strong>Google Chrome</strong>. In the address bar at the top, type:</p>
+<pre><code>http://localhost:8080
+</code></pre>
+<p>Press Enter. The CVAT login page should appear.</p>
+<hr />
+<h3 id="when-you-are-done_1">When You Are Done<a class="headerlink" href="#when-you-are-done_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Save your work in CVAT: <strong><code>Ctrl + S</code></strong></li>
+<li>Close the Chrome tab.</li>
+<li>In the Command Prompt window, type <code>exit</code> and press Enter — or close the window.</li>
+</ol>
+<hr />
+<h3 id="alternative-using-putty-on-windows">Alternative: Using PuTTY on Windows<a class="headerlink" href="#alternative-using-putty-on-windows" title="Permanent link">&para;</a></h3>
+<p>If the SSH command in Command Prompt does not work, PuTTY is a free, easy-to-use alternative with a graphical interface.</p>
+<p><strong>Step 1 — Download PuTTY</strong></p>
+<p>Go to <a href="https://www.putty.org/">putty.org</a> and click <strong>Download PuTTY</strong>. Run the installer.</p>
+<p><strong>Step 2 — Set up the SSH tunnel</strong></p>
+<ol>
+<li>Open PuTTY from the Start menu.</li>
+<li>In the <strong>Host Name</strong> box, type: <code>YOUR-USERNAME@IP-ADDRESS</code></li>
+<li>Example: <code>clinician1@130.251.10.25</code></li>
+<li>Make sure <strong>Port</strong> is <code>22</code> and <strong>SSH</strong> is selected.</li>
+<li>In the <strong>left panel</strong>, click <strong>Connection → SSH → Tunnels</strong>.</li>
+<li>Fill in:</li>
+<li><strong>Source port:</strong> <code>8080</code></li>
+<li><strong>Destination:</strong> <code>localhost:8080</code></li>
+<li>Click the <strong>Add</strong> button. You should see <code>L8080  localhost:8080</code> appear in the list above.</li>
+<li>Go back to <strong>Session</strong> in the left panel.</li>
+<li>In the <strong>Saved Sessions</strong> box, type a name (e.g. <code>CVAT</code>) and click <strong>Save</strong> — so you don't have to set this up again next time.</li>
+<li>Click <strong>Open</strong>.</li>
+</ol>
+<p><strong>Step 3 — Log in</strong></p>
+<p>A black terminal window opens and asks for your password. Type your <strong>SSH password</strong> and press Enter. (Nothing appears as you type — this is normal.)</p>
+<p>You will see a <code>$</code> prompt when connected. Keep this window open.</p>
+<p><strong>Step 4 — Open Chrome</strong></p>
+<p>Go to <code>http://localhost:8080</code> in Google Chrome.</p>
+<p><strong>Next time:</strong> Open PuTTY, double-click <code>CVAT</code> in the Saved Sessions list, enter your password, and open Chrome. That's it.</p>
+<hr />
+<h2 id="logging-in-to-cvat">Logging In to CVAT<a class="headerlink" href="#logging-in-to-cvat" title="Permanent link">&para;</a></h2>
+<p>Once Chrome shows <code>http://localhost:8080</code>, you will see the CVAT login page.</p>
+<ol>
+<li>Enter your <strong>CVAT username</strong> and <strong>CVAT password</strong>.</li>
+<li>These are <strong>different</strong> from your SSH password — the coordinator gives you both sets separately.</li>
+<li>Click <strong>Login</strong>.</li>
+</ol>
+<p>You should now see the CVAT dashboard showing your projects and tasks.</p>
+<hr />
+<h2 id="finding-your-assigned-task">Finding Your Assigned Task<a class="headerlink" href="#finding-your-assigned-task" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click <strong>Tasks</strong> in the navigation bar at the top of the page.</li>
+<li>Look for your name in the <strong>Assignee</strong> column. Click the task name.</li>
+<li>Click the <strong>Job</strong> link that appears. The annotation editor opens with your video.</li>
+</ol>
+<p><strong>If no tasks appear:</strong></p>
+<p>You may need to switch into the study group first:
+1. Click your name or avatar in the <strong>top-right corner</strong>.
+2. Look for an <strong>Organization</strong> entry in the dropdown menu.
+3. Click the study name (e.g. <code>polyp-study-2026</code>).
+4. The page refreshes and your tasks should now appear.</p>
+<p>If tasks are still missing, email <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a>.</p>
+<hr />
+<h2 id="annotating-your-task">Annotating Your Task<a class="headerlink" href="#annotating-your-task" title="Permanent link">&para;</a></h2>
+<p>For the full annotation guide, see:
+- <a href="../video-annotation-basics/">Video Annotation Basics</a> — the step-by-step workflow
+- <a href="../annotation-types/">Annotation Types</a> — what shapes to draw (masks for this study)
+- <a href="../using-segment-anything-model/">Using the AI Tool (SAM)</a> — click-to-segment with AI
+- <a href="../video-object-tracking/">Video Object Tracking</a> — AI tracking across frames</p>
+<hr />
+<h2 id="finishing-your-annotation-task">Finishing Your Annotation Task<a class="headerlink" href="#finishing-your-annotation-task" title="Permanent link">&para;</a></h2>
+<p>When you have finished annotating all frames in your task:</p>
+<p><strong>1. Check your work</strong> using this list:
+- [ ] Every lesion annotated on every frame it is visible
+- [ ] Masks cover the structure accurately — zoom in (<code>+</code> key) to check edges
+- [ ] Correct label used (e.g. "polyp")
+- [ ] Object marked as "Outside" when it leaves the frame</p>
+<p><strong>2. Save:</strong> Press <code>Ctrl + S</code> (Windows) or <code>Cmd + S</code> (Mac).</p>
+<p><strong>3. Mark as finished:</strong>
+- Click the <strong>Menu button (≡)</strong> in the top-right corner of the annotation editor.
+- Select <strong>Finish the job</strong>.</p>
+<p><strong>4. Notify the coordinator:</strong> Email <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a> to say you have finished, and mention if you are ready to review a colleague's task.</p>
+<hr />
+<h2 id="reviewing-another-clinicians-work">Reviewing Another Clinician's Work<a class="headerlink" href="#reviewing-another-clinicians-work" title="Permanent link">&para;</a></h2>
+<p>The coordinator will tell you which colleague's task to review. Here is the full process.</p>
+<blockquote>
+<p><strong>Note:</strong> To approve or reject a task, your CVAT account must have the <strong>Supervisor</strong> role. The coordinator sets this up. If you see a "permission denied" message, email <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a>.</p>
+</blockquote>
+<hr />
+<h3 id="step-1-connect-and-log-in">Step 1 — Connect and log in<a class="headerlink" href="#step-1-connect-and-log-in" title="Permanent link">&para;</a></h3>
+<p>Follow the connection steps above (same as for annotating). Log in to CVAT.</p>
+<hr />
+<h3 id="step-2-find-the-task-to-review">Step 2 — Find the task to review<a class="headerlink" href="#step-2-find-the-task-to-review" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Tasks</strong> in the top navigation bar.</li>
+<li>Find the task that has your <strong>colleague's name</strong> as Assignee (not your name).</li>
+<li>Click the task name to open it.</li>
+</ol>
+<hr />
+<h3 id="step-3-signal-that-you-are-reviewing-it">Step 3 — Signal that you are reviewing it<a class="headerlink" href="#step-3-signal-that-you-are-reviewing-it" title="Permanent link">&para;</a></h3>
+<ol>
+<li>In the job row, find the <strong>Stage</strong> dropdown.</li>
+<li>Change it from <strong>Annotation</strong> to <strong>Validation</strong>.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>This shows the coordinator and your colleague that you are actively reviewing the task.</p>
+<hr />
+<h3 id="step-4-open-and-review-the-annotations">Step 4 — Open and review the annotations<a class="headerlink" href="#step-4-open-and-review-the-annotations" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>Job</strong> link to open the annotation editor.</p>
+<p>Step through every frame using:
+- <strong><code>F</code></strong> → next frame
+- <strong><code>D</code></strong> → previous frame</p>
+<p>For each frame, check:</p>
+<table>
+<thead>
+<tr>
+<th>What to check</th>
+<th>What to look for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coverage</strong></td>
+<td>Every frame where the lesion is visible should have a mask</td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>The mask should cover the full lesion — press <code>+</code> to zoom in and inspect the edges</td>
+</tr>
+<tr>
+<td><strong>Label</strong></td>
+<td>The correct label name should be shown (e.g. "polyp")</td>
+</tr>
+<tr>
+<td><strong>Outside marking</strong></td>
+<td>When the lesion disappears from view, the annotation should be marked Outside — not left sitting on a blank area</td>
+</tr>
+<tr>
+<td><strong>No phantom annotations</strong></td>
+<td>There should be no masks on frames where the lesion is not present</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-5-accept-or-send-back">Step 5 — Accept or send back<a class="headerlink" href="#step-5-accept-or-send-back" title="Permanent link">&para;</a></h3>
+<p><strong>If the work is correct:</strong></p>
+<ol>
+<li>Go back to <strong>Tasks</strong> (click Tasks in the top bar).</li>
+<li>Open the task and find the job.</li>
+<li>Change <strong>Stage</strong> to <strong>Acceptance</strong>.</li>
+<li>Click <strong>Save</strong>.</li>
+<li>Email your colleague and the coordinator to confirm.</li>
+</ol>
+<p><strong>If corrections are needed:</strong></p>
+<ol>
+<li>Make a note of the <strong>frame numbers</strong> and what is wrong.</li>
+<li>Change the <strong>Stage</strong> back to <strong>Annotation</strong>.</li>
+<li>Click <strong>Save</strong>.</li>
+<li>Email your colleague with specific feedback, for example:<blockquote>
+<p><em>"Frame 47 — the mask does not cover the lower edge of the polyp. Frame 83 — annotation is missing entirely."</em></p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<h3 id="responding-to-review-feedback-when-your-work-is-sent-back">Responding to Review Feedback (When Your Work Is Sent Back)<a class="headerlink" href="#responding-to-review-feedback-when-your-work-is-sent-back" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Connect via SSH and log in as normal.</li>
+<li>Open your task — it will now show as <strong>Annotation</strong> stage again.</li>
+<li>Go to the specific frame numbers mentioned in the feedback.</li>
+<li>Fix the annotations.</li>
+<li>Save: <code>Ctrl + S</code> (Windows) or <code>Cmd + S</code> (Mac).</li>
+<li>Click <strong>Menu (≡) → Finish the job</strong>.</li>
+<li>Email the reviewer to say corrections are done.</li>
+</ol>
+<hr />
+<h2 id="what-happens-to-the-annotations">What Happens to the Annotations?<a class="headerlink" href="#what-happens-to-the-annotations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All annotations are stored on the university PC. You do not need to send files to anyone.</li>
+<li>If you and your colleague annotated <strong>different videos</strong>, the coordinator gets one combined file when they export — nothing to merge.</li>
+<li>If you both annotated the <strong>same video</strong> (consistency check), the coordinator exports them separately and compares them.</li>
+</ul>
+<hr />
+<h2 id="common-questions">Common Questions<a class="headerlink" href="#common-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Do I need to keep the terminal/Command Prompt window open the whole time?</strong>
+Yes. The terminal window is what keeps the secure connection alive. If you close it, <code>http://localhost:8080</code> will stop loading. Just re-run the SSH command and refresh Chrome to reconnect.</p>
+<p><strong>I typed my password but it says "Permission denied"</strong>
+Check that you typed the correct SSH username and password (not your CVAT password). If you are unsure, ask the coordinator to reset your SSH password.</p>
+<p><strong>The terminal connected but Chrome shows "This site can't be reached"</strong>
+The SSH tunnel connects to port 8080. Make sure the address in Chrome is exactly <code>http://localhost:8080</code> — not <code>https://</code> and not just <code>localhost</code>.</p>
+<p><strong>Nothing happens after I type the SSH command</strong>
+Wait up to 10 seconds. If still nothing, check your network connection and confirm the IP address with the coordinator.</p>
+<p><strong>What if the connection drops while I am annotating?</strong>
+Your last saved annotations are safe on the university PC. Re-run the SSH command, open Chrome at <code>http://localhost:8080</code>, log back in, and reopen your task. Only changes since your last <code>Ctrl + S</code> / <code>Cmd + S</code> will be lost.</p>
+<p><strong>Can both clinicians use CVAT at the same time?</strong>
+Yes. Multiple people can be connected and annotating simultaneously without any problems.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../interface-overview/" class="btn btn-neutral float-right" title="Interface Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../interface-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

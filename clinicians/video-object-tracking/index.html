@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/clinicians/video-object-tracking/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Video Object Tracking - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Video Object Tracking";
+        var mkdocs_page_input_path = "clinicians/video-object-tracking.md";
+        var mkdocs_page_url = "/annotation-manual/clinicians/video-object-tracking/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Video Object Tracking</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-tracking-works">How Tracking Works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-by-step-how-to-track-an-object">Step-by-Step: How to Track an Object</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-have-an-annotation-on-the-starting-frame">Step 1 — Have an annotation on the starting frame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-open-the-ai-tools-panel">Step 2 — Open the AI tools panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-start-tracking">Step 3 — Start tracking</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-step-through-the-frames-and-check">Step 4 — Step through the frames and check</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-when-the-object-leaves-the-video">Step 5 — When the object leaves the video</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-if-i-dont-have-the-tracking-tool">What If I Don't Have the Tracking Tool?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tips-for-difficult-videos">Tips for Difficult Videos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reviewing-your-work">Reviewing Your Work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For Clinicians</li>
+      <li class="breadcrumb-item active">Video Object Tracking</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/clinicians/video-object-tracking.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="video-object-tracking">Video Object Tracking<a class="headerlink" href="#video-object-tracking" title="Permanent link">&para;</a></h1>
+<p>The tracking tool lets you draw (or accept from SAM) an annotation on <strong>one frame</strong>, and then the AI automatically follows that object through all the subsequent frames — so you don't have to adjust it manually on every frame.</p>
+<blockquote>
+<p><strong>Before you start:</strong> Check that the tracking tool is available — click the <strong>magic wand icon (✦)</strong> in the left panel and look for a <strong>Trackers</strong> tab. If it is missing, contact your study coordinator.</p>
+</blockquote>
+<hr />
+<h2 id="how-tracking-works">How Tracking Works<a class="headerlink" href="#how-tracking-works" title="Permanent link">&para;</a></h2>
+<ol>
+<li>You have an annotation on a starting frame (either drawn manually or created with SAM).</li>
+<li>You activate the tracker.</li>
+<li>The AI follows the object forward, placing an adjusted annotation on every subsequent frame automatically.</li>
+<li>You review the frames — on most frames the tracker will be correct. You only need to fix the frames where it drifted.</li>
+</ol>
+<p>Tracking works best when:
+- The object is clearly visible and well-lit.
+- The camera is not moving very quickly.
+- The object does not become hidden behind other structures for long periods.</p>
+<hr />
+<h2 id="step-by-step-how-to-track-an-object">Step-by-Step: How to Track an Object<a class="headerlink" href="#step-by-step-how-to-track-an-object" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-have-an-annotation-on-the-starting-frame">Step 1 — Have an annotation on the starting frame<a class="headerlink" href="#step-1-have-an-annotation-on-the-starting-frame" title="Permanent link">&para;</a></h3>
+<p>You should already have a mask or bounding box on the first frame where the object appears. This can be:
+- A mask you accepted from SAM (see <a href="../using-segment-anything-model/">Using the AI Tool</a>), or
+- A shape you drew manually.</p>
+<h3 id="step-2-open-the-ai-tools-panel">Step 2 — Open the AI tools panel<a class="headerlink" href="#step-2-open-the-ai-tools-panel" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>magic wand icon (✦)</strong> in the left panel.</li>
+<li>Click the <strong>Trackers</strong> tab.</li>
+<li>Click the tracker model name (e.g. <strong>TransT</strong>) to select it.</li>
+</ol>
+<h3 id="step-3-start-tracking">Step 3 — Start tracking<a class="headerlink" href="#step-3-start-tracking" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure you are on the frame with your starting annotation.</li>
+<li>Click the <strong>Track</strong> button in the AI tools panel.</li>
+<li>CVAT sends this frame to the AI. The tracker will now generate annotations on subsequent frames as you advance.</li>
+</ol>
+<h3 id="step-4-step-through-the-frames-and-check">Step 4 — Step through the frames and check<a class="headerlink" href="#step-4-step-through-the-frames-and-check" title="Permanent link">&para;</a></h3>
+<p>Press <strong><code>F</code></strong> to advance one frame at a time. On each frame you will see the tracker's result:</p>
+<ul>
+<li><strong>Looks correct?</strong> Press <code>F</code> again to continue.</li>
+<li><strong>Drifted (wrong position or size)?</strong></li>
+<li>Click and drag the annotation to the correct position.</li>
+<li>Resize it if needed by dragging the corner handles.</li>
+<li>Continue pressing <code>F</code> — the tracker picks up from your correction.</li>
+</ul>
+<h3 id="step-5-when-the-object-leaves-the-video">Step 5 — When the object leaves the video<a class="headerlink" href="#step-5-when-the-object-leaves-the-video" title="Permanent link">&para;</a></h3>
+<p>When the object is no longer visible:
+1. Right-click the annotation.
+2. Select <strong>Outside the frame</strong>.</p>
+<p>This marks the track as finished from this frame onwards without deleting it.</p>
+<hr />
+<h2 id="what-if-i-dont-have-the-tracking-tool">What If I Don't Have the Tracking Tool?<a class="headerlink" href="#what-if-i-dont-have-the-tracking-tool" title="Permanent link">&para;</a></h2>
+<p>If the <strong>Trackers</strong> tab is missing or empty, the tracking model has not been set up on the server yet. Contact your study coordinator.</p>
+<p>As a fallback, you can use <strong>CVAT's built-in interpolation</strong> (no AI required):</p>
+<ol>
+<li>Draw the annotation on frame 1.</li>
+<li>Jump forward 20–30 frames (use the timeline or type the frame number).</li>
+<li>Move the annotation to where the object is now.</li>
+<li>CVAT automatically fills in the frames in between.</li>
+</ol>
+<p>This is less accurate than AI tracking but still much faster than adjusting every single frame manually.</p>
+<hr />
+<h2 id="tips-for-difficult-videos">Tips for Difficult Videos<a class="headerlink" href="#tips-for-difficult-videos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera moves very quickly</td>
+<td>Track in short bursts of 10–15 frames; correct, then continue</td>
+</tr>
+<tr>
+<td>Object goes partially off screen</td>
+<td>Mark as "outside" when less than half is visible; start a new annotation when it comes back fully</td>
+</tr>
+<tr>
+<td>Two similar objects near each other</td>
+<td>Track one at a time; use the eye icon (right panel) to hide the other while you work</td>
+</tr>
+<tr>
+<td>Object changes appearance (e.g. view angle changes)</td>
+<td>Correct the annotation early — the tracker adapts from corrected keyframes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="reviewing-your-work">Reviewing Your Work<a class="headerlink" href="#reviewing-your-work" title="Permanent link">&para;</a></h2>
+<p>After tracking all objects in the video, review the whole thing:</p>
+<ol>
+<li>Go back to frame 1 (type <code>1</code> in the frame counter and press Enter, or drag the timeline back).</li>
+<li>Press the <strong>Play button</strong> to watch the video with your annotations overlaid.</li>
+<li>Look for:</li>
+<li>Masks that drift away from the object.</li>
+<li>Gaps (frames where the annotation disappeared but the object is still visible).</li>
+<li>Annotations on frames where the object is not there.</li>
+<li>Fix any issues, then save: <strong><code>Ctrl + S</code></strong>.</li>
+</ol>
+<hr />
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../coordinator/reviewing-and-exporting/">Reviewing and Exporting Annotations</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../using-segment-anything-model/" class="btn btn-neutral float-left" title="Using the AI Tool (SAM)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../coordinator/system-requirements/" class="btn btn-neutral float-right" title="System Requirements">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../using-segment-anything-model/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../coordinator/system-requirements/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

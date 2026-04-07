@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/coordinator/creating-projects-and-tasks/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Creating Projects and Tasks - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Creating Projects and Tasks";
+        var mkdocs_page_input_path = "coordinator/creating-projects-and-tasks.md";
+        var mkdocs_page_url = "/annotation-manual/coordinator/creating-projects-and-tasks/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../clinicians/video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Creating Projects and Tasks</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-project-and-what-is-a-task">What Is a Project and What Is a Task?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-create-a-project">Step 1 — Create a Project</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#defining-labels">Defining Labels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adding-extra-information-to-labels-attributes">Adding Extra Information to Labels (Attributes)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-create-a-task-one-per-video">Step 2 — Create a Task (one per video)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#settings-you-may-want-to-change">Settings You May Want to Change</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-assign-the-task-to-a-clinician">Step 3 — Assign the Task to a Clinician</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-track-progress">Step 4 — Track Progress</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-more-tasks-same-settings">Creating More Tasks (Same Settings)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For the Coordinator</li>
+      <li class="breadcrumb-item active">Creating Projects and Tasks</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/coordinator/creating-projects-and-tasks.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-projects-and-tasks">Creating Projects and Tasks<a class="headerlink" href="#creating-projects-and-tasks" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>This page is for the study coordinator (Amey).</strong> Clinicians do not need to create projects or tasks — they only need to open their assigned task and annotate. Go to <a href="../../clinicians/clinician-workflow/">Clinician Workflow</a> instead.</p>
+</blockquote>
+<hr />
+<h2 id="what-is-a-project-and-what-is-a-task">What Is a Project and What Is a Task?<a class="headerlink" href="#what-is-a-project-and-what-is-a-task" title="Permanent link">&para;</a></h2>
+<p>Think of it this way:</p>
+<ul>
+<li>A <strong>Project</strong> is the whole study (e.g. "Colonoscopy Polyp Study 2026"). It holds all the settings and label definitions.</li>
+<li>A <strong>Task</strong> is one video from that study (e.g. "Patient_001"). Each video gets its own task.</li>
+<li>A <strong>Job</strong> is a portion of a task. If a video is very long, you can split it into segments and assign each segment to a different clinician.</li>
+</ul>
+<p>Labels you define on the project are shared across all its tasks — you only need to set them up once.</p>
+<hr />
+<h2 id="step-1-create-a-project">Step 1 — Create a Project<a class="headerlink" href="#step-1-create-a-project" title="Permanent link">&para;</a></h2>
+<ol>
+<li>From the main dashboard, click <strong>Projects</strong> in the top navigation bar.</li>
+<li>Click <strong>+ Create a new project</strong>.</li>
+<li>Give the project a <strong>Name</strong> (e.g. <code>Colonoscopy Polyp Study 2026</code>).</li>
+<li>Define your <strong>labels</strong> (see below).</li>
+<li>Click <strong>Submit</strong>.</li>
+</ol>
+<h3 id="defining-labels">Defining Labels<a class="headerlink" href="#defining-labels" title="Permanent link">&para;</a></h3>
+<p>Labels are the categories your clinicians will annotate (e.g. "polyp", "lesion", "instrument").</p>
+<p>For each label:</p>
+<ol>
+<li>Click <strong>Add label</strong>.</li>
+<li>Type the label <strong>name</strong> (e.g. <code>polyp</code>).</li>
+<li>Choose a <strong>colour</strong> — pick a different colour for each label so they are easy to tell apart on screen.</li>
+<li>Click the <strong>tick</strong> to confirm.</li>
+<li>Repeat for all labels.</li>
+</ol>
+<h3 id="adding-extra-information-to-labels-attributes">Adding Extra Information to Labels (Attributes)<a class="headerlink" href="#adding-extra-information-to-labels-attributes" title="Permanent link">&para;</a></h3>
+<p>If you need clinicians to record extra details about each annotation (e.g. polyp type, size category), you can add attributes:</p>
+<ol>
+<li>On the label, click <strong>Add attribute</strong>.</li>
+<li>Give it a name (e.g. <code>morphology</code>).</li>
+<li>Choose the type of input:</li>
+<li><strong>Select</strong> — a dropdown list (e.g. pedunculated / sessile / flat)</li>
+<li><strong>Checkbox</strong> — a yes/no tick</li>
+<li><strong>Text</strong> — free text</li>
+<li><strong>Number</strong> — a number with a range</li>
+<li>For a <strong>Select</strong> type, type each option and press Enter after each one.</li>
+<li>Tick <strong>Required</strong> if clinicians must fill this in.</li>
+</ol>
+<hr />
+<h2 id="step-2-create-a-task-one-per-video">Step 2 — Create a Task (one per video)<a class="headerlink" href="#step-2-create-a-task-one-per-video" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open your project and click <strong>+ Create new task</strong> inside it.</li>
+<li>Fill in the <strong>Name</strong> — use something clear, e.g. <code>Patient_001_20260401</code>.</li>
+<li>The project's labels are inherited automatically — you do not need to re-enter them.</li>
+<li>Under <strong>Files</strong>, upload the video (see <a href="../uploading-videos/">Uploading Videos</a>).</li>
+<li>Leave all other settings at their defaults unless you have a specific reason to change them.</li>
+<li>Click <strong>Submit &amp; Open</strong>.</li>
+</ol>
+<h3 id="settings-you-may-want-to-change">Settings You May Want to Change<a class="headerlink" href="#settings-you-may-want-to-change" title="Permanent link">&para;</a></h3>
+<p>You only need to touch these if you have a specific need:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frame step</strong></td>
+<td>Annotate every Nth frame (e.g. 5 = every 5th frame)</td>
+<td>1 = every frame</td>
+</tr>
+<tr>
+<td><strong>Segment size</strong></td>
+<td>Split the video into sections for multiple annotators</td>
+<td>0 = one section</td>
+</tr>
+<tr>
+<td><strong>Start / Stop frame</strong></td>
+<td>Annotate only part of the video</td>
+<td>Full video</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="step-3-assign-the-task-to-a-clinician">Step 3 — Assign the Task to a Clinician<a class="headerlink" href="#step-3-assign-the-task-to-a-clinician" title="Permanent link">&para;</a></h2>
+<p>After creating the task, CVAT creates one or more <strong>Jobs</strong> inside it. Assign each job to the relevant clinician:</p>
+<blockquote>
+<p><strong>Reminder:</strong> Clinicians must have the <strong>Supervisor</strong> role in the organisation (set during <a href="../first-login-and-setup/#step-5-invite-clinicians-to-the-organisation-and-set-them-as-supervisors">First Login and Setup</a>) to be able to review and approve each other's work. Workers can only annotate — they cannot change task stages.</p>
+</blockquote>
+<ol>
+<li>Open the task by clicking its name.</li>
+<li>You will see a list of <strong>Jobs</strong>.</li>
+<li>Click on a job to expand it.</li>
+<li>In the <strong>Assignee</strong> field, search for and select the clinician's username.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>The clinician will now see this job in their task list when they log in.</p>
+<hr />
+<h2 id="step-4-track-progress">Step 4 — Track Progress<a class="headerlink" href="#step-4-track-progress" title="Permanent link">&para;</a></h2>
+<p>Jobs move through three stages:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Annotation</strong></td>
+<td>The clinician is actively working on it</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>The clinician has finished — you are reviewing it</td>
+</tr>
+<tr>
+<td><strong>Acceptance</strong></td>
+<td>Reviewed and approved — ready to export</td>
+</tr>
+</tbody>
+</table>
+<p>To change a job's stage: open the task, expand the job, and change the <strong>Stage</strong> dropdown. Click <strong>Save</strong>.</p>
+<ul>
+<li>When a clinician finishes, change the stage to <strong>Validation</strong> and review the annotations.</li>
+<li>If corrections are needed, change it back to <strong>Annotation</strong> and message the clinician.</li>
+<li>When satisfied, set it to <strong>Acceptance</strong>.</li>
+</ul>
+<hr />
+<h2 id="creating-more-tasks-same-settings">Creating More Tasks (Same Settings)<a class="headerlink" href="#creating-more-tasks-same-settings" title="Permanent link">&para;</a></h2>
+<p>To add more videos to the same project without re-entering all the settings:</p>
+<ol>
+<li>On the Tasks page, find an existing task.</li>
+<li>Click the <strong>⋮ (three-dot menu)</strong> next to it.</li>
+<li>Select <strong>Copy</strong>.</li>
+<li>Change the task name and upload the new video file.</li>
+<li>Click <strong>Submit</strong>.</li>
+</ol>
+<hr />
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../uploading-videos/">Uploading Videos</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../first-login-and-setup/" class="btn btn-neutral float-left" title="First Login and Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../uploading-videos/" class="btn btn-neutral float-right" title="Uploading Videos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../first-login-and-setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../uploading-videos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

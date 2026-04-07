@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/clinicians/interface-overview/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Interface Overview - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Interface Overview";
+        var mkdocs_page_input_path = "clinicians/interface-overview.md";
+        var mkdocs_page_url = "/annotation-manual/clinicians/interface-overview/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Interface Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-main-dashboard">The Main Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-annotation-editor">The Annotation Editor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-tools-panel-left-side">The Tools Panel (Left Side)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-objects-panel-right-side">The Objects Panel (Right Side)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-timeline-bottom">The Timeline (Bottom)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#saving-your-work">Saving Your Work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#essential-keyboard-shortcuts">Essential Keyboard Shortcuts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For Clinicians</li>
+      <li class="breadcrumb-item active">Interface Overview</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/clinicians/interface-overview.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="interface-overview">Interface Overview<a class="headerlink" href="#interface-overview" title="Permanent link">&para;</a></h1>
+<p>This page gives you a quick tour of the CVAT screen so you feel confident before you start annotating.</p>
+<hr />
+<h2 id="the-main-dashboard">The Main Dashboard<a class="headerlink" href="#the-main-dashboard" title="Permanent link">&para;</a></h2>
+<p>After logging in, you land on the main dashboard. Click <strong>Tasks</strong> in the top bar to find your assigned video.</p>
+<pre><code>┌──────────────────────────────────────────────────┐
+│  CVAT  │  Projects   Tasks   Jobs            👤  │  ← top bar
+├──────────────────────────────────────────────────┤
+│                                                  │
+│   Your assigned tasks appear here                │
+│                                                  │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tasks</strong></td>
+<td>Click here to find your video to annotate</td>
+</tr>
+<tr>
+<td><strong>Jobs</strong></td>
+<td>If a task is split into sections, each section is a "job"</td>
+</tr>
+<tr>
+<td><strong>👤 (top right)</strong></td>
+<td>Your account — click to change your password or switch organisation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-annotation-editor">The Annotation Editor<a class="headerlink" href="#the-annotation-editor" title="Permanent link">&para;</a></h2>
+<p>When you open a task and click on a job, you enter the annotation editor. This is where you draw your masks.</p>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│  Save  Undo  Redo  ← Frame 42 of 300 →              Menu ≡  │ ← top bar
+├─────────┬────────────────────────────────┬───────────────────┤
+│         │                                │                   │
+│  TOOLS  │                                │  OBJECTS LIST     │
+│  (left) │                                │  (right)          │
+│         │     VIDEO FRAME                │                   │
+│  Draw   │     (the image you annotate)   │  Shows everything │
+│  shapes │                                │  you have drawn   │
+│         │                                │  on this frame    │
+├─────────┴────────────────────────────────┴───────────────────┤
+│  ◀◀  ◀  ▶  ▶▶    ────────── Timeline ──────────────────────  │ ← timeline
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="the-tools-panel-left-side">The Tools Panel (Left Side)<a class="headerlink" href="#the-tools-panel-left-side" title="Permanent link">&para;</a></h2>
+<p>These are the drawing tools. For this project you will mostly use the <strong>Brush (mask)</strong> tool and the <strong>AI tool</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Keyboard key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arrow / Select</strong></td>
+<td><code>Esc</code></td>
+<td>Click to select or move an existing annotation</td>
+</tr>
+<tr>
+<td><strong>Brush (mask)</strong></td>
+<td><code>B</code></td>
+<td>Paint a precise mask over an object — <strong>use this for annotating</strong></td>
+</tr>
+<tr>
+<td><strong>AI tool (magic wand ✦)</strong></td>
+<td>—</td>
+<td>Let the AI draw the mask for you with one click</td>
+</tr>
+<tr>
+<td><strong>Rectangle</strong></td>
+<td><code>R</code></td>
+<td>Draw a rough bounding box (less common)</td>
+</tr>
+<tr>
+<td><strong>Polygon</strong></td>
+<td><code>N</code></td>
+<td>Trace an outline by clicking around the edge</td>
+</tr>
+<tr>
+<td><strong>Tag</strong></td>
+<td>—</td>
+<td>Label the whole frame (e.g. "poor visibility") without drawing a shape</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-objects-panel-right-side">The Objects Panel (Right Side)<a class="headerlink" href="#the-objects-panel-right-side" title="Permanent link">&para;</a></h2>
+<p>This panel lists every annotation you have drawn on the current frame.</p>
+<ul>
+<li><strong>Click</strong> any item in the list to select that annotation on the canvas.</li>
+<li><strong>Eye icon</strong> — hide an annotation temporarily while you work on others.</li>
+<li><strong>Label name</strong> — shown next to each object (e.g. "polyp").</li>
+</ul>
+<hr />
+<h2 id="the-timeline-bottom">The Timeline (Bottom)<a class="headerlink" href="#the-timeline-bottom" title="Permanent link">&para;</a></h2>
+<p>The timeline shows the full length of the video. Use it to move between frames.</p>
+<table>
+<thead>
+<tr>
+<th>Button / Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F</code></td>
+<td>Go to the <strong>next</strong> frame</td>
+</tr>
+<tr>
+<td><code>D</code></td>
+<td>Go to the <strong>previous</strong> frame</td>
+</tr>
+<tr>
+<td><code>◀</code> / <code>▶</code> buttons</td>
+<td>Step one frame back or forward</td>
+</tr>
+<tr>
+<td><code>◀◀</code> / <code>▶▶</code> buttons</td>
+<td>Jump several frames</td>
+</tr>
+<tr>
+<td>▶ Play button</td>
+<td>Play the video (no annotating while playing)</td>
+</tr>
+<tr>
+<td>Frame counter (e.g. "42 / 300")</td>
+<td>Shows which frame you are on</td>
+</tr>
+</tbody>
+</table>
+<p>Frames that already have annotations are shown as coloured marks on the timeline bar.</p>
+<hr />
+<h2 id="saving-your-work">Saving Your Work<a class="headerlink" href="#saving-your-work" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>CVAT does not save automatically.</strong> You must save manually.</p>
+</blockquote>
+<ul>
+<li>Press <strong><code>Ctrl + S</code></strong> (Windows/Linux) or <strong><code>Cmd + S</code></strong> (Mac), or</li>
+<li>Click the <strong>Save</strong> button in the top bar.</li>
+</ul>
+<p>A brief green message will confirm the save. <strong>Save every 5–10 frames</strong> to avoid losing work.</p>
+<hr />
+<h2 id="essential-keyboard-shortcuts">Essential Keyboard Shortcuts<a class="headerlink" href="#essential-keyboard-shortcuts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl + S</code></td>
+<td><strong>Save</strong> your annotations</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td><strong>Undo</strong> the last action</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>Next frame</td>
+</tr>
+<tr>
+<td><code>D</code></td>
+<td>Previous frame</td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td>Activate the brush/mask tool</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Cancel what you are drawing / go back to select mode</td>
+</tr>
+<tr>
+<td><code>Delete</code></td>
+<td>Delete the selected annotation</td>
+</tr>
+<tr>
+<td><code>+</code> / <code>-</code></td>
+<td>Zoom in / zoom out on the image</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Show all keyboard shortcuts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../video-annotation-basics/">Video Annotation Basics</a> — start annotating</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../clinician-workflow/" class="btn btn-neutral float-left" title="Connecting + Annotating + Reviewing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../video-annotation-basics/" class="btn btn-neutral float-right" title="Video Annotation Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../clinician-workflow/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../video-annotation-basics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

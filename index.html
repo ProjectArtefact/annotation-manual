@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Video Annotation Manual</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/annotation-manual/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#important-notes">Important Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-this-study-is-set-up">How This Study Is Set Up</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#start-here-which-one-are-you">Start Here — Which one are you?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#i-am-a-clinician-i-need-to-connect-and-start-annotating">I am a clinician — I need to connect and start annotating</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-am-the-study-coordinator-amey">I am the study coordinator (Amey)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-reference">Quick Reference</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="clinicians/clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="clinicians/interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="clinicians/video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="clinicians/annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="clinicians/ai-assisted-annotation-overview/">AI-Assisted Annotation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="clinicians/using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="clinicians/video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="coordinator/system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="coordinator/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="coordinator/first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="coordinator/uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="coordinator/installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="coordinator/reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/index.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="video-annotation-manual-home">Video Annotation Manual — Home<a class="headerlink" href="#video-annotation-manual-home" title="Permanent link">&para;</a></h1>
+<p>Welcome to the annotation guide for the endoscopy study.</p>
+<hr />
+<h2 id="important-notes">Important Notes<a class="headerlink" href="#important-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Data Privacy:</strong> CVAT runs on a <strong>dedicated university PC</strong>. No patient data is uploaded to the internet.</li>
+<li><strong>What you will do:</strong> Draw <strong>segmentation masks</strong> around lesion regions in endoscopy video frames.</li>
+<li><strong>Questions?</strong> Contact <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a></li>
+</ul>
+<hr />
+<h2 id="how-this-study-is-set-up">How This Study Is Set Up<a class="headerlink" href="#how-this-study-is-set-up" title="Permanent link">&para;</a></h2>
+<pre><code>University PC (running CVAT)
+        │
+        ├── Clinician A's laptop  ──── connects via SSH tunnel ──► Chrome → http://localhost:8080
+        │
+        └── Clinician B's laptop  ──── connects via SSH tunnel ──► Chrome → http://localhost:8080
+</code></pre>
+<ul>
+<li>CVAT is installed <strong>once</strong> on a dedicated university PC by the study coordinator (Amey).</li>
+<li>Each clinician <strong>connects to it from their own laptop</strong> using an SSH tunnel — there is nothing to install.</li>
+<li>All annotation data is stored centrally on the university PC.</li>
+</ul>
+<hr />
+<h2 id="start-here-which-one-are-you">Start Here — Which one are you?<a class="headerlink" href="#start-here-which-one-are-you" title="Permanent link">&para;</a></h2>
+<h3 id="i-am-a-clinician-i-need-to-connect-and-start-annotating">I am a clinician — I need to connect and start annotating<a class="headerlink" href="#i-am-a-clinician-i-need-to-connect-and-start-annotating" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="clinicians/clinician-workflow/#what-is-the-ssh-tunnel">Connecting to CVAT via SSH</a> — first time setup</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="clinicians/clinician-workflow/#logging-in-to-cvat">Logging In</a> — your CVAT username and password</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="clinicians/interface-overview/">Interface Overview</a> — a tour of the screen</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="clinicians/video-annotation-basics/">Video Annotation Basics</a> — how to annotate your assigned task</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="clinicians/annotation-types/">Annotation Types</a> — what shapes to draw</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="clinicians/using-segment-anything-model/">Using the AI Tool (SAM)</a> — let AI draw the mask for you</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="clinicians/video-object-tracking/">Video Object Tracking</a> — let AI follow the object across frames</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="clinicians/clinician-workflow/#finishing-your-annotation-task">Finishing Your Task</a> — how to submit when done</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="clinicians/clinician-workflow/#reviewing-another-clinicians-work">Reviewing Another Clinician's Work</a> — how to act as a reviewer</td>
+</tr>
+<tr>
+<td>—</td>
+<td><a href="troubleshooting/">Troubleshooting</a> — if something goes wrong</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="i-am-the-study-coordinator-amey">I am the study coordinator (Amey)<a class="headerlink" href="#i-am-the-study-coordinator-amey" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="coordinator/system-requirements/">System Requirements</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="coordinator/installation/">Installation</a> — install CVAT on the university PC (done once)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="coordinator/first-login-and-setup/">First Login and Setup</a> — create SSH accounts + CVAT accounts for clinicians</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a> — set up the annotation work</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="coordinator/uploading-videos/">Uploading Videos</a> — add the endoscopy videos</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="coordinator/installing-ai-models/">Installing AI Models</a> — enable the AI annotation tools</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="coordinator/reviewing-and-exporting/">Reviewing and Exporting Annotations</a> — monitor progress and download finished data</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-reference">Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Clinician connection</strong></td>
+<td>SSH tunnel then open Chrome at <code>http://localhost:8080</code></td>
+</tr>
+<tr>
+<td><strong>Browser</strong></td>
+<td>Google Chrome only</td>
+</tr>
+<tr>
+<td><strong>Save your work</strong></td>
+<td><code>Ctrl + S</code> — CVAT does not auto-save</td>
+</tr>
+<tr>
+<td><strong>Questions</strong></td>
+<td><a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="clinicians/clinician-workflow/" class="btn btn-neutral float-right" title="Connecting + Annotating + Reviewing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+    
+      <span><a href="clinicians/clinician-workflow/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-04-07 02:15:13.414534+00:00
+-->

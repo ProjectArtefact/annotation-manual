@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://projectartefact.github.io/annotation-manual/clinicians/ai-assisted-annotation-overview/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>AI-Assisted Annotation Overview - Video Annotation Manual</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "AI-Assisted Annotation Overview";
+        var mkdocs_page_input_path = "clinicians/ai-assisted-annotation-overview.md";
+        var mkdocs_page_url = "/annotation-manual/clinicians/ai-assisted-annotation-overview/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Video Annotation Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For Clinicians</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../clinician-workflow/">Connecting + Annotating + Reviewing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interface-overview/">Interface Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-annotation-basics/">Video Annotation Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../annotation-types/">Annotation Types</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">AI-Assisted Annotation Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-the-ai-can-do">What the AI Can Do</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-draw-the-mask-for-you-segment-anything-model-sam">1. Draw the mask for you (Segment Anything Model — SAM)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-follow-the-object-across-frames-object-tracking">2. Follow the object across frames (Object Tracking)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-recommended-workflow">The Recommended Workflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#before-you-start-check-ai-tools-are-available">Before You Start — Check AI Tools Are Available</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-segment-anything-model/">Using the AI Tool (SAM)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-object-tracking/">Video Object Tracking</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">For the Coordinator</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/system-requirements/">System Requirements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/first-login-and-setup/">First Login and Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/creating-projects-and-tasks/">Creating Projects and Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/uploading-videos/">Uploading Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/installing-ai-models/">Installing AI Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../coordinator/reviewing-and-exporting/">Reviewing and Exporting</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Video Annotation Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">For Clinicians</li>
+      <li class="breadcrumb-item active">AI-Assisted Annotation Overview</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ProjectArtefact/annotation-manual/edit/main/docs/clinicians/ai-assisted-annotation-overview.md">Edit on ProjectArtefact/annotation-manual</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ai-assisted-annotation-overview">AI-Assisted Annotation — Overview<a class="headerlink" href="#ai-assisted-annotation-overview" title="Permanent link">&para;</a></h1>
+<p>CVAT includes AI tools that can dramatically reduce the time it takes to annotate videos. Instead of carefully tracing every object by hand on every frame, the AI can do most of the drawing for you.</p>
+<hr />
+<h2 id="what-the-ai-can-do">What the AI Can Do<a class="headerlink" href="#what-the-ai-can-do" title="Permanent link">&para;</a></h2>
+<h3 id="1-draw-the-mask-for-you-segment-anything-model-sam">1. Draw the mask for you (Segment Anything Model — SAM)<a class="headerlink" href="#1-draw-the-mask-for-you-segment-anything-model-sam" title="Permanent link">&para;</a></h3>
+<p>You click once on a lesion or structure, and the AI instantly draws a precise mask around it. This replaces the need to trace outlines manually.</p>
+<ul>
+<li><strong>How to use it:</strong> See <a href="../using-segment-anything-model/">Using the AI Tool (SAM)</a></li>
+<li><strong>Time saving:</strong> What might take 1–2 minutes of careful tracing takes about 2 seconds.</li>
+</ul>
+<h3 id="2-follow-the-object-across-frames-object-tracking">2. Follow the object across frames (Object Tracking)<a class="headerlink" href="#2-follow-the-object-across-frames-object-tracking" title="Permanent link">&para;</a></h3>
+<p>You draw (or accept) an annotation on one frame, and the AI automatically follows that object through the rest of the video — adjusting the annotation on every subsequent frame.</p>
+<ul>
+<li><strong>How to use it:</strong> See <a href="../video-object-tracking/">Video Object Tracking</a></li>
+<li><strong>Time saving:</strong> Instead of adjusting annotations on every frame manually, you just check and correct the few frames where the AI drifted.</li>
+</ul>
+<hr />
+<h2 id="the-recommended-workflow">The Recommended Workflow<a class="headerlink" href="#the-recommended-workflow" title="Permanent link">&para;</a></h2>
+<p>Combining both AI tools gives the fastest and most accurate results:</p>
+<pre><code>For each object in the video:
+
+  1. Go to the first frame where it appears
+  2. Click on it with the AI tool (SAM) → AI draws the mask
+  3. Accept the mask → this creates your annotation
+  4. Use the Tracker → AI follows the object forward through the video
+  5. Step through frames and correct any where the AI drifted
+  6. When the object leaves the video, mark it as &quot;outside&quot;
+  7. Save (Ctrl + S)
+</code></pre>
+<p>This typically cuts annotation time by <strong>5 to 10 times</strong> compared to drawing every frame by hand.</p>
+<hr />
+<h2 id="before-you-start-check-ai-tools-are-available">Before You Start — Check AI Tools Are Available<a class="headerlink" href="#before-you-start-check-ai-tools-are-available" title="Permanent link">&para;</a></h2>
+<p>The AI tools must be set up by your study coordinator before you can use them. To check:</p>
+<ol>
+<li>Open a task in the annotation editor.</li>
+<li>Look in the <strong>left panel</strong> for the <strong>magic wand icon (✦)</strong>.</li>
+<li>Click it — a panel should open showing available AI tools.</li>
+<li>If the panel is empty or the icon is missing, contact your study coordinator at <a href="mailto:ameya.pore@univr.it">ameya.pore@univr.it</a>.</li>
+</ol>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../using-segment-anything-model/">Using the AI Tool (SAM)</a> — click to segment</li>
+<li><a href="../video-object-tracking/">Video Object Tracking</a> — follow objects across frames</li>
+<li><a href="../../coordinator/installing-ai-models/">Installing AI Models</a> — for the study coordinator setting up the AI</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../annotation-types/" class="btn btn-neutral float-left" title="Annotation Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../using-segment-anything-model/" class="btn btn-neutral float-right" title="Using the AI Tool (SAM)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ProjectArtefact/annotation-manual" class="fa fa-code-fork" style="color: #fcfcfc"> ProjectArtefact/annotation-manual</a>
+        </span>
+    
+    
+      <span><a href="../annotation-types/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../using-segment-anything-model/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
