@@ -1,6 +1,6 @@
 # Installation
 
-> **This page is for the study coordinator (Amey).** Clinicians do not install anything. Once CVAT is running, clinicians connect via SSH tunnel — see [Clinician Workflow](../clinicians/clinician-workflow.md).
+> **This page is for the study coordinator (Ameya).** Clinicians do not install anything. Once CVAT is running, clinicians connect via SSH tunnel — see [Clinician Workflow](../clinicians/clinician-workflow.md).
 
 These instructions are for installing CVAT on the **dedicated university PC running Ubuntu Linux**. This is a one-time process.
 
@@ -98,7 +98,7 @@ docker exec -it cvat_server bash -ic 'python3 ~/manage.py createsuperuser'
 ```
 
 You will be asked for:
-- **Username** — choose something you will remember (e.g. `amey`)
+- **Username** — choose something you will remember (e.g. `ameya`)
 - **Email address** — your university email
 - **Password** — choose a strong password
 

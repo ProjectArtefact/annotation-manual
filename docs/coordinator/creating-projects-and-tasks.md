@@ -1,6 +1,6 @@
 # Creating Projects and Tasks
 
-> **This page is for the study coordinator (Amey).** Clinicians do not need to create projects or tasks — they only need to open their assigned task and annotate. Go to [Clinician Workflow](../clinicians/clinician-workflow.md) instead.
+> **This page is for the study coordinator (Ameya).** Clinicians do not need to create projects or tasks — they only need to open their assigned task and annotate. Go to [Clinician Workflow](../clinicians/clinician-workflow.md) instead.
 
 ---
 
